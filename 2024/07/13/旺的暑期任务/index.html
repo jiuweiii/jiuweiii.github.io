@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://example.com/picture/image-20240713190842250.png">
 <meta property="og:image" content="d:/typora/%E8%BD%AF%E4%BB%B6%E6%9C%AC%E4%BD%93/Typora/resources/%E6%88%AA%E5%9B%BE/image-20240710183802392.png">
 <meta property="article:published_time" content="2024-07-13T08:38:57.000Z">
-<meta property="article:modified_time" content="2024-07-14T06:59:42.410Z">
+<meta property="article:modified_time" content="2024-07-14T16:00:15.292Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="暑期">
 <meta name="twitter:card" content="summary">
@@ -138,7 +138,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">1</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
 
   </li>
   </ul>
@@ -201,7 +201,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-07-14 14:59:42" itemprop="dateModified" datetime="2024-07-14T14:59:42+08:00">2024-07-14</time>
+                <time title="修改时间：2024-07-15 00:00:15" itemprop="dateModified" datetime="2024-07-15T00:00:15+08:00">2024-07-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -219,14 +219,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.7k</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>8 分钟</span>
             </span>
 
         </div>
@@ -270,7 +270,7 @@
 </ol>
 <h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><h5 id="每周汇报"><a href="#每周汇报" class="headerlink" title="每周汇报"></a>每周汇报</h5><ol>
 <li>每周一开组会，晚上9点前发周报</li>
-<li><a href="mailto:&#116;&#x69;&#97;&#110;&#120;&#50;&#50;&#x39;&#x40;&#x73;&#122;&#117;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#110;">&#116;&#x69;&#97;&#110;&#120;&#50;&#50;&#x39;&#x40;&#x73;&#122;&#117;&#46;&#x65;&#x64;&#x75;&#46;&#x63;&#110;</a></li>
+<li><a href="mailto:&#116;&#105;&#97;&#110;&#120;&#x32;&#50;&#x39;&#x40;&#x73;&#122;&#x75;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;">&#116;&#105;&#97;&#110;&#120;&#x32;&#50;&#x39;&#x40;&#x73;&#122;&#x75;&#x2e;&#x65;&#x64;&#x75;&#46;&#x63;&#110;</a></li>
 <li>可以尝试弄一个会实时更新的个人博客给老师看看效果，下面是国航的github效果图<br><a target="_blank" rel="noopener" href="https://hasegawaazusa.github.io/">https://hasegawaazusa.github.io/</a></li>
 </ol>
 <h5 id="集中实习"><a href="#集中实习" class="headerlink" title="集中实习"></a>集中实习</h5><ol>
@@ -349,14 +349,46 @@
 <li>可以尝试询问老师有无资源，但是前提是我得先确定我想要做什么我能做什么，要说得清楚</li>
 </ol>
 <h1 id="实时监控系统"><a href="#实时监控系统" class="headerlink" title="实时监控系统"></a>实时监控系统</h1><h3 id="浩嘉二号车要实现的功能"><a href="#浩嘉二号车要实现的功能" class="headerlink" title="浩嘉二号车要实现的功能"></a>浩嘉二号车要实现的功能</h3><ol>
-<li>把nano接上二号车，nano没有网卡和蓝牙，要装网卡（usb直插网卡）和蓝牙（usb口集成的蓝牙），浩嘉是要用nano直接当成pc来用，用线插板子传输数据，通过串口直接把数据实时显示出来，直接用nano外接显示器来进行开发。<strong>那浩嘉要做的事情是不是也要涉及到前后端</strong></li>
+<li>把nano接上二号车，nano没有网卡和蓝牙，要装网卡（usb直插网卡）和蓝牙（usb口集成的蓝牙），浩嘉是要用nano装上网卡之后，直接联网当成pc来用，用nano外接显示器，在nano上直接对板子进行开发；用线插串口板子传输数据，通过串口直接把数据实时显示出来，来进行调试。<strong>那浩嘉要做的事情是不是也要涉及到前后端，那浩嘉要网卡做什么</strong></li>
 </ol>
-<h3 id="疑问：我是要用那两台老车，还是二号车"><a href="#疑问：我是要用那两台老车，还是二号车" class="headerlink" title="疑问：我是要用那两台老车，还是二号车"></a>疑问：我是要用那两台老车，还是二号车</h3><h3 id="方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改"><a href="#方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改" class="headerlink" title="方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改"></a>方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改</h3><ol>
+<h3 id="疑问：我是要用那两台老车，还是二号车"><a href="#疑问：我是要用那两台老车，还是二号车" class="headerlink" title="疑问：我是要用那两台老车，还是二号车"></a>疑问：我是要用那两台老车，还是二号车</h3><h3 id="疑问：有空详细查看的东西"><a href="#疑问：有空详细查看的东西" class="headerlink" title="疑问：有空详细查看的东西"></a>疑问：有空详细查看的东西</h3><p>HTML格式？<br>json格式？<br>URL通道？</p>
+<p>HTTP传输？</p>
+<h4 id="什么是操作系统（简称”OS”-“Operating-System”-）"><a href="#什么是操作系统（简称”OS”-“Operating-System”-）" class="headerlink" title="什么是操作系统（简称”OS” “Operating System” ）"></a>什么是操作系统（简称”OS” “Operating System” ）</h4><ul>
+<li>操作系统是用户与计算机硬件系统之间的接口，用户通过操作系统的帮助，可以快速、有效和安全、可靠地操纵计算机系统中的各类资源，以处理自己的程序</li>
+</ul>
+<h3 id="API介绍"><a href="#API介绍" class="headerlink" title="API介绍"></a>API介绍</h3><ol>
+<li><p>API是应用程序编程接口<br>API 的一个主要功能是提供通用功能集。API同时也是一种中间件，为各种不同平台提供数据共享。程序设计的实践中，编程接口的设计首先要使软件系统的职责得到合理划分。良好的接口设计可以降低系统各部分的相互依赖，提高组成单元的内聚性，降低组成单元间的耦合程度，从而提高系统的可维护性和可扩展性。</p>
+</li>
+<li><p>API就是接口，就是通道，负责一个程序和其他软件的沟通，本质是预先定义的函数。</p>
+<p>说得更加通俗易懂一些，别人写好的代码，或者编译好的程序，提供给你使用，就叫做API。你使用了别人代码（或者程序）中的某个函数、类、对象，就叫做使用了某个API。</p>
+<p>各种编程语言自带的标准库其实也是API。</p>
+<p>还有很多第三方（非官方）的组织机构、公司、个人提供的代码，也是一种 API。有时候被称为框架或者库。</p>
+</li>
+</ol>
+<h3 id="jetson-nano"><a href="#jetson-nano" class="headerlink" title="jetson nano"></a>jetson nano</h3><ol>
+<li>型号：Jetson Nano开发套件，945-13450-0000-100</li>
+<li>资源网站：<ul>
+<li><a target="_blank" rel="noopener" href="https://www.yahboom.net/study/Jetson-nano-2GB">www.yahboom.net</a>，登录不进去？</li>
+<li><a target="_blank" rel="noopener" href="https://www.yahboom.net/study/jetson-nano">www.yahboom.net</a>，也登录不进去</li>
+</ul>
+</li>
+</ol>
+<h3 id="方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改"><a href="#方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改" class="headerlink" title="方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改"></a>方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改</h3><ol>
 <li><p>加网卡上云</p>
-<p><strong>华为云有一个写好了的前后端？</strong><br>二号车和那两台车都是arduino，没有网卡和蓝牙，如果要上云，首先要装网卡，然后数据传输到华为云，然后用nano接收华为云的数据，优点是可以直接用华为云现成的前后端，不用自己再设计，并且浩嘉会给二号车上网卡</p>
+<ol>
+<li><p>项目参考</p>
+<ul>
+<li><p><strong>Astro轻应用</strong>，华为云的一个可视化UI，如果要上云可以考虑直接用这个UI，就省去了写前后端的功夫</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://bbs.huaweicloud.com/blogs/404803%EF%BC%8C%E5%8D%8E%E4%B8%BA%E4%BA%91%E4%B9%8B%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E6%90%AD%E5%BB%BAIoT%E7%89%A9%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E5%85%85%E7%94%B5%E6%A1%A9%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E5%A4%A7%E5%B1%8F%EF%BC%88%E4%B8%8A%EF%BC%89">https://bbs.huaweicloud.com/blogs/404803，华为云之手把手教你搭建IoT物联网应用充电桩实时监控大屏（上）</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>二号车和那两台车都是arduino，没有网卡和蓝牙，如果要上云，首先要装网卡，然后数据传输到华为云，然后用nano接收华为云的数据，优点是可以直接用华为云现成的前后端，不用自己再设计，并且浩嘉会给二号车上网卡</p>
 </li>
 <li><p>直接用数据线</p>
-<p>串口来传输数据到nano接收，但是这样的话就需要自己在nano上写一个前后端来实现显示接收到的数据和报警的功能</p>
+<p>串口来传输数据到nano接收，但是这样的话就需要自己在nano上写一个前后端来实现显示接收到的数据和报警的功能，主要工作就其实更偏向是写一个前后端了</p>
 </li>
 <li><p>蓝牙传输</p>
 <p>给arduino加蓝牙模块，用蓝牙来连接nano传输数据？也是要自己设计前后端<br>胡老师的人体imu是使用蓝牙模块进行数据传输的，如果使用nano能不能实现实时传输白色imu的数据？</p>
@@ -379,6 +411,13 @@
 
 
         
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/07/19/%E9%9B%86%E4%B8%AD%E5%AE%9E%E4%B9%A0/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
   </article>
@@ -436,7 +475,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E5%B8%B8%E5%AE%89%E6%8E%92"><span class="nav-number">1.</span> <span class="nav-text">日常安排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%91%E6%9C%9F%E5%AE%89%E6%8E%92"><span class="nav-number">2.</span> <span class="nav-text">暑期安排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">任务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AF%8F%E5%91%A8%E6%B1%87%E6%8A%A5"><span class="nav-number">3.0.1.</span> <span class="nav-text">每周汇报</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E4%B8%AD%E5%AE%9E%E4%B9%A0"><span class="nav-number">3.0.2.</span> <span class="nav-text">集中实习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%B1%E4%B8%9A%E7%A7%8B%E6%8B%9B%E7%9A%84%E5%87%86%E5%A4%87"><span class="nav-number">3.0.3.</span> <span class="nav-text">就业秋招的准备</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.0.4.</span> <span class="nav-text">实时监测系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87"><span class="nav-number">3.0.5.</span> <span class="nav-text">毕业论文</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%87%87%E9%9B%86%E7%99%BE%E5%BA%A6%E7%9A%84%E8%90%9D%E5%8D%9C%E5%BF%AB%E8%B7%91%E7%9A%84L3%E7%BA%A7%E5%88%AB%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%95%B0%E6%8D%AE"><span class="nav-number">3.0.6.</span> <span class="nav-text">无人机采集百度的萝卜快跑的L3级别自动驾驶数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E4%B8%AD%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.0.7.</span> <span class="nav-text">集中任务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vocation"><span class="nav-number">3.0.8.</span> <span class="nav-text">vocation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A7%8B%E6%8B%9B%E5%87%86%E5%A4%87"><span class="nav-number">3.0.9.</span> <span class="nav-text">秋招准备</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number"></span> <span class="nav-text">实时监控系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%A9%E5%98%89%E4%BA%8C%E5%8F%B7%E8%BD%A6%E8%A6%81%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">浩嘉二号车要实现的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%96%91%E9%97%AE%EF%BC%9A%E6%88%91%E6%98%AF%E8%A6%81%E7%94%A8%E9%82%A3%E4%B8%A4%E5%8F%B0%E8%80%81%E8%BD%A6%EF%BC%8C%E8%BF%98%E6%98%AF%E4%BA%8C%E5%8F%B7%E8%BD%A6"><span class="nav-number">2.</span> <span class="nav-text">疑问：我是要用那两台老车，还是二号车</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%EF%BC%88%E9%92%88%E5%AF%B9%E7%9A%84%E9%83%BD%E6%98%AF%E8%BD%A6%E4%BD%93%E9%83%A8%E5%88%86%EF%BC%89%E5%A6%82%E6%9E%9C%E6%98%AF%E8%83%A1%E8%80%81%E5%B8%88%E7%9A%84imu%E7%9A%84%E8%AF%9D%E8%A6%81%E5%9C%A8%E8%83%A1%E8%80%81%E5%B8%88%E7%9A%84%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%8F%88%E4%BF%AE%E6%94%B9"><span class="nav-number">3.</span> <span class="nav-text">方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A5%E5%B8%B8%E5%AE%89%E6%8E%92"><span class="nav-number">1.</span> <span class="nav-text">日常安排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9A%91%E6%9C%9F%E5%AE%89%E6%8E%92"><span class="nav-number">2.</span> <span class="nav-text">暑期安排</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.</span> <span class="nav-text">任务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AF%8F%E5%91%A8%E6%B1%87%E6%8A%A5"><span class="nav-number">3.0.1.</span> <span class="nav-text">每周汇报</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E4%B8%AD%E5%AE%9E%E4%B9%A0"><span class="nav-number">3.0.2.</span> <span class="nav-text">集中实习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%B0%B1%E4%B8%9A%E7%A7%8B%E6%8B%9B%E7%9A%84%E5%87%86%E5%A4%87"><span class="nav-number">3.0.3.</span> <span class="nav-text">就业秋招的准备</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.0.4.</span> <span class="nav-text">实时监测系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87"><span class="nav-number">3.0.5.</span> <span class="nav-text">毕业论文</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%87%87%E9%9B%86%E7%99%BE%E5%BA%A6%E7%9A%84%E8%90%9D%E5%8D%9C%E5%BF%AB%E8%B7%91%E7%9A%84L3%E7%BA%A7%E5%88%AB%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%95%B0%E6%8D%AE"><span class="nav-number">3.0.6.</span> <span class="nav-text">无人机采集百度的萝卜快跑的L3级别自动驾驶数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9B%86%E4%B8%AD%E4%BB%BB%E5%8A%A1"><span class="nav-number">3.0.7.</span> <span class="nav-text">集中任务</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#vocation"><span class="nav-number">3.0.8.</span> <span class="nav-text">vocation</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%A7%8B%E6%8B%9B%E5%87%86%E5%A4%87"><span class="nav-number">3.0.9.</span> <span class="nav-text">秋招准备</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9E%E6%97%B6%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F"><span class="nav-number"></span> <span class="nav-text">实时监控系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%A9%E5%98%89%E4%BA%8C%E5%8F%B7%E8%BD%A6%E8%A6%81%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">浩嘉二号车要实现的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%96%91%E9%97%AE%EF%BC%9A%E6%88%91%E6%98%AF%E8%A6%81%E7%94%A8%E9%82%A3%E4%B8%A4%E5%8F%B0%E8%80%81%E8%BD%A6%EF%BC%8C%E8%BF%98%E6%98%AF%E4%BA%8C%E5%8F%B7%E8%BD%A6"><span class="nav-number">2.</span> <span class="nav-text">疑问：我是要用那两台老车，还是二号车</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%96%91%E9%97%AE%EF%BC%9A%E6%9C%89%E7%A9%BA%E8%AF%A6%E7%BB%86%E6%9F%A5%E7%9C%8B%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="nav-number">3.</span> <span class="nav-text">疑问：有空详细查看的东西</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%88%E7%AE%80%E7%A7%B0%E2%80%9DOS%E2%80%9D-%E2%80%9COperating-System%E2%80%9D-%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">什么是操作系统（简称”OS” “Operating System” ）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#API%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.</span> <span class="nav-text">API介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jetson-nano"><span class="nav-number">5.</span> <span class="nav-text">jetson nano</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%EF%BC%88%E9%92%88%E5%AF%B9%E7%9A%84%E9%83%BD%E6%98%AF%E8%BD%A6%E4%BD%93%E9%83%A8%E5%88%86%EF%BC%89%E5%A6%82%E6%9E%9C%E6%98%AF%E8%83%A1%E8%80%81%E5%B8%88%E7%9A%84imu%E7%9A%84%E8%AF%9D%E8%A6%81%E5%9C%A8%E8%83%A1%E8%80%81%E5%B8%88%E7%9A%84%E4%BB%A3%E7%A0%81%E9%87%8C%E9%9D%A2%E5%8F%88%E4%BF%AE%E6%94%B9"><span class="nav-number">6.</span> <span class="nav-text">方案（针对的都是车体部分）如果是胡老师的imu的话要在胡老师的代码里面又修改</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -452,7 +491,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -506,7 +545,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6 分钟</span>
+    <span title="站点阅读时长">9 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
