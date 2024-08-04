@@ -28,7 +28,7 @@
 <meta property="og:description" content="集中实习笔记">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-07-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-07-19T03:26:45.531Z">
+<meta property="article:modified_time" content="2024-07-26T12:00:29.270Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="暑期">
 <meta name="twitter:card" content="summary">
@@ -125,7 +125,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -135,7 +135,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
 
   </li>
   </ul>
@@ -190,10 +190,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-07-19 00:00:00 / 修改时间：11:26:45" itemprop="dateCreated datePublished" datetime="2024-07-19T00:00:00+08:00">2024-07-19</time>
+              <time title="创建时间：2024-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2024-07-19T00:00:00+08:00">2024-07-19</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-07-26 20:00:29" itemprop="dateModified" datetime="2024-07-26T20:00:29+08:00">2024-07-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -210,14 +216,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>291</span>
+              <span>2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -241,7 +247,7 @@
 <h5 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h5><p>绝对定位完成之后，绝对定位触发按钮复位，哪里用到绝对定位触发按钮？为什么用?</p>
 <h5 id="自动-停止"><a href="#自动-停止" class="headerlink" title="自动 停止"></a>自动 停止</h5><p>按下自动停止之后，绝对定位触发按钮复位，哪里用到绝对定位触发按钮？</p>
 <p><strong>自动前往AB点，需要决定定位按钮置一</strong></p>
-<h3 id="定位数据"><a href="#定位数据" class="headerlink" title="定位数据"></a>定位数据</h3><ol>
+<h3 id="定位数据（YY指的是Y轴气缸和机械手的延申）"><a href="#定位数据（YY指的是Y轴气缸和机械手的延申）" class="headerlink" title="定位数据（YY指的是Y轴气缸和机械手的延申）"></a>定位数据（YY指的是Y轴气缸和机械手的延申）</h3><ol>
 <li>1号，Y轴气缸，坐标223</li>
 <li>Y,180</li>
 <li>Y140</li>
@@ -253,13 +259,75 @@
 <li>皮带上的：Y轴气缸，331</li>
 </ol>
 <ul>
-<li>下午的任务流程<ul>
-<li>推料</li>
-<li>皮带传送到待取位（材料监测）</li>
-<li>z轴上升→Y轴下来→x331→z轴下降→手夹住→</li>
+<li><p>下午的任务流程</p>
+<ul>
+<li><p>加手自动切换按钮，自动还要加入起动按钮</p>
+</li>
+<li><p>推料</p>
+</li>
+<li><p>皮带传送到待取位（材料监测）</p>
+</li>
+<li><p>不续3：  </p>
+</li>
+<li><p>z轴上升1s→Y轴下来→x331→z轴下降1s→手夹住→z轴上升1s</p>
+</li>
+<li><p>一号仓点位报上去</p>
+<p>同理可以八个号仓位点</p>
+<p>→z轴下降1s→爪子松开</p>
+</li>
 </ul>
 </li>
 </ul>
+<p>要怎么样呢</p>
+<p>如果仓库1没有物块，就执行1号仓（5）</p>
+<p>0</p>
+<p>如果仓库选择函数，全部运送完了之后，执行停止，先不管吧</p>
+<h5 id="仓库物料的选择"><a href="#仓库物料的选择" class="headerlink" title="仓库物料的选择"></a>仓库物料的选择</h5><p>1-4默认是白色（2）<br>5-8默认是黑色（3）</p>
+<p>可以通过屏幕来修改每个仓库要的物料种类，但是只能是2、3之间选择</p>
+<p>要实现控制谁不要，控制谁要<br>物料属性赋予4说明是不要的，那0呢？怎么循环？<br>如果给0是不要的，</p>
+<p>先获取当前皮带上物料的属性<br>仓库的跳转：监测所有的仓库及其需要的属性，对比当前物料上的属性，跳转到对应的功能步序</p>
+<p>现在问题是0</p>
+<p>把到皮带夹这个功能打包进去仓库功能函数</p>
+<p>结果：如果是黑色，不会到皮带上夹物块，就是说跳不到4，</p>
+<p>仓库里面，仓库的跳转：仓库的跳转：仓库的跳转：仓库的跳转：</p>
+<p>本应该是有用的黑色被判断成没用？</p>
+<p>在前面加一个监测步序，如果是不要的就执行</p>
+<h5 id="重大-bug，只会回原点，别的功能都用不了"><a href="#重大-bug，只会回原点，别的功能都用不了" class="headerlink" title="重大 bug，只会回原点，别的功能都用不了"></a>重大 bug，只会回原点，别的功能都用不了</h5><p>好像是那个手自动切换那里的使能端的问题</p>
+<h5 id="怎么做到控制某个仓库不要物料捏？"><a href="#怎么做到控制某个仓库不要物料捏？" class="headerlink" title="怎么做到控制某个仓库不要物料捏？"></a>怎么做到控制某个仓库不要物料捏？</h5><p>如果仓库的值设定为0，那么就跳过这个仓库</p>
+<p>这段实习不仅让我了解了西门子机械爪设备的基本操作，也锻炼了我的实际操作能力、plc编程能力和问题解决能力。以下是我对这段实习经历的自我评后与总结。</p>
+<p> 在老师的指导下，我首先学习了以下内容：对西门子机械爪机床设备的组态配置，并且使用屏幕操控机床设备。在操作的过程中，不仅仅是基本的软件操作方法，老师还非常详细地说明了其基本原理。随后老师教我如何将计算机软件指令转化为机床的实际动作。在这个过程中，我使用plc对机床进行控制，实现了机床的自动、手动运作及其切换。并且将屏幕与机床连接，实现了直接通过屏幕对机床的控制功能。最后在老师的一步步的带领下，我完成了机械爪的自动物料夹取与仓库自动监测的示例应用。</p>
+<p>在实习项目中，我与其他实习生以及老师密切合作与交流，共同解决了多个难题，不仅提高了我的团队合作能力，也提高了我的交流能力。在整个实习期间，我对新知识与新技能的学习始终保持高度的热情，以积极的态度尽力吸收理论知识以及实现实际操作。</p>
+<p>这段实习经历不仅为我专业发展类定了坚突基础，更让我深入体会到了团队合作与交流在工作中的重要性。未来，我将继 续努力学习，不助提高自己在工业自动化领域的专业能力，将所学所得充分应用到实际的工作当中。</p>
+<p>在安习项目中，我与其他突习生和导师密切合作,共同解块了i4多挑战,这不仅提高了我的团队合作能力,也培着了我在紧张情况下有效沟通的技工3。在型个突习期闷,我对亲h 知识和技能始终保持高度的学习热情和积树态度,对理论知识与实际操作我都尽力吸收,，面对名种技术和操作上的挑找，我都迅整分析题根源并提出有效的解决方案,并在每一天结束后，进行反思通过此次实习，我深入了解了工业自动化的突所应用和现场管理的重要性，这段经历不仅为我专业发展类定了坚突基础,也让我更加深则理解了团队合作、目铁管理和职业道德的鱼要性。未,我将继 续努力学习，不助提高自己在工业自动化领域的专业授的,将所海所得被入来的定阳工作中,为梦想不助追求进步和成长。</p>
+<h3 id="2024年7月24日任务五机械爪"><a href="#2024年7月24日任务五机械爪" class="headerlink" title="2024年7月24日任务五机械爪"></a>2024年7月24日任务五机械爪</h3><h5 id="取料"><a href="#取料" class="headerlink" title="取料"></a>取料</h5><p>z轴下降→夹子夹紧→z轴上升</p>
+<h5 id="初始化步序逻辑："><a href="#初始化步序逻辑：" class="headerlink" title="初始化步序逻辑："></a>初始化步序逻辑：</h5><p>上位置1，本位置0，本位可动</p>
+<p>本位置1，本位不动</p>
+<p>第一步只要置0，就能动</p>
+<p>全部置0，按照123的顺序置0，即可返回第一步，记得关掉开关，所以取料放料开关最好是保持的</p>
+<h5 id="调仓"><a href="#调仓" class="headerlink" title="调仓"></a>调仓</h5><ol>
+<li>首先是仓库监测，把一个拿过去监测，监测出来之后，如果目标位置有空位，那么要把目标位置的格子先扔到空格子里面<ol>
+<li>怎么仓库监测，，x轴的坐标是怎么定位的？</li>
+<li>Y轴气缸不能停</li>
+<li>旋转取料位是仓库上面的，旋转放料位是皮带上的</li>
+</ol>
+</li>
+</ol>
+<h5 id="定时器用到了71"><a href="#定时器用到了71" class="headerlink" title="定时器用到了71"></a>定时器用到了71</h5><h5 id="M305-7"><a href="#M305-7" class="headerlink" title="M305.7"></a>M305.7</h5><h5 id="步序用到了32"><a href="#步序用到了32" class="headerlink" title="步序用到了32"></a>步序用到了32</h5><h5 id="完成标志位用到了30"><a href="#完成标志位用到了30" class="headerlink" title="完成标志位用到了30"></a>完成标志位用到了30</h5><h5 id="最大的初始化"><a href="#最大的初始化" class="headerlink" title="最大的初始化"></a>最大的初始化</h5><ol>
+<li><p>记得把正确入库标志位8</p>
+</li>
+<li><p>当前的仓库比较值加1，就是当前比较的仓库。那么要查询该仓库是否是空的<br>如果计数器 &#x3D; 0，那么就是一号仓被需要</p>
+<ol>
+<li>循环初始化：完成标志位0、调仓步序[0]</li>
+<li>1号仓：完成标志位的2 和 15 置0、皮带正转、延申气缸需要置0，</li>
+</ol>
+</li>
+<li><p>现象：爪子回到目标仓库的上方之后，马上回正并且x轴移动到皮带</p>
+</li>
+</ol>
+<p>弄一个寻空调仓标志位：<br>寻空调仓函数：能够自动把目标仓库的物料放到别的空仓库里面<br><strong>下面分段要加一个空位调仓函数完成的标志位、空位调仓标志位复位</strong><br><strong>用之前初始化</strong>：空位调仓标志位、空位调仓函数完成标志位，	加在步序35开头</p>
+<p><strong>空位调仓函数：开头要初始化其步序</strong></p>
+<p>接下来的就是回正，并且回到皮带上方，进入皮带自动夹取程序</p>
+<p>所选择的仓位是：检查排序仓位<br>要调入的仓位是：物料要放进去的仓位<br>目标空仓位是：用来暂存的空仓位</p>
 
     </div>
 
@@ -279,7 +347,7 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2024/07/13/%E6%97%BA%E7%9A%84%E6%9A%91%E6%9C%9F%E4%BB%BB%E5%8A%A1/" rel="prev" title="大三下暑期任务">
+    <a href="/2024/07/19/%E6%AF%95%E4%B8%9A%E8%AE%BA%E6%96%87/" rel="prev" title="大三下暑期任务">
       <i class="fa fa-chevron-left"></i> 大三下暑期任务
     </a></div>
       <div class="post-nav-item"></div>
@@ -341,7 +409,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%A5%E5%81%9C"><span class="nav-number">1.</span> <span class="nav-text">急停</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%9E%E5%8E%9F%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">回原点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="nav-number">3.</span> <span class="nav-text">绝对定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8-%E5%81%9C%E6%AD%A2"><span class="nav-number">4.</span> <span class="nav-text">自动 停止</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D%E6%95%B0%E6%8D%AE"><span class="nav-number"></span> <span class="nav-text">定位数据</span></a></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%A5%E5%81%9C"><span class="nav-number">1.</span> <span class="nav-text">急停</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%9E%E5%8E%9F%E7%82%B9"><span class="nav-number">2.</span> <span class="nav-text">回原点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="nav-number">3.</span> <span class="nav-text">绝对定位</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8-%E5%81%9C%E6%AD%A2"><span class="nav-number">4.</span> <span class="nav-text">自动 停止</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D%E6%95%B0%E6%8D%AE%EF%BC%88YY%E6%8C%87%E7%9A%84%E6%98%AFY%E8%BD%B4%E6%B0%94%E7%BC%B8%E5%92%8C%E6%9C%BA%E6%A2%B0%E6%89%8B%E7%9A%84%E5%BB%B6%E7%94%B3%EF%BC%89"><span class="nav-number"></span> <span class="nav-text">定位数据（YY指的是Y轴气缸和机械手的延申）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BB%93%E5%BA%93%E7%89%A9%E6%96%99%E7%9A%84%E9%80%89%E6%8B%A9"><span class="nav-number">1.</span> <span class="nav-text">仓库物料的选择</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%87%8D%E5%A4%A7-bug%EF%BC%8C%E5%8F%AA%E4%BC%9A%E5%9B%9E%E5%8E%9F%E7%82%B9%EF%BC%8C%E5%88%AB%E7%9A%84%E5%8A%9F%E8%83%BD%E9%83%BD%E7%94%A8%E4%B8%8D%E4%BA%86"><span class="nav-number">2.</span> <span class="nav-text">重大 bug，只会回原点，别的功能都用不了</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E5%81%9A%E5%88%B0%E6%8E%A7%E5%88%B6%E6%9F%90%E4%B8%AA%E4%BB%93%E5%BA%93%E4%B8%8D%E8%A6%81%E7%89%A9%E6%96%99%E6%8D%8F%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">怎么做到控制某个仓库不要物料捏？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2024%E5%B9%B47%E6%9C%8824%E6%97%A5%E4%BB%BB%E5%8A%A1%E4%BA%94%E6%9C%BA%E6%A2%B0%E7%88%AA"><span class="nav-number"></span> <span class="nav-text">2024年7月24日任务五机械爪</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8F%96%E6%96%99"><span class="nav-number">1.</span> <span class="nav-text">取料</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%AD%A5%E5%BA%8F%E9%80%BB%E8%BE%91%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">初始化步序逻辑：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%B0%83%E4%BB%93"><span class="nav-number">3.</span> <span class="nav-text">调仓</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8%E7%94%A8%E5%88%B0%E4%BA%8671"><span class="nav-number">4.</span> <span class="nav-text">定时器用到了71</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#M305-7"><span class="nav-number">5.</span> <span class="nav-text">M305.7</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%AD%A5%E5%BA%8F%E7%94%A8%E5%88%B0%E4%BA%8632"><span class="nav-number">6.</span> <span class="nav-text">步序用到了32</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%8C%E6%88%90%E6%A0%87%E5%BF%97%E4%BD%8D%E7%94%A8%E5%88%B0%E4%BA%8630"><span class="nav-number">7.</span> <span class="nav-text">完成标志位用到了30</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">8.</span> <span class="nav-text">最大的初始化</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -357,7 +425,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -370,7 +438,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -406,12 +474,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">8k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
