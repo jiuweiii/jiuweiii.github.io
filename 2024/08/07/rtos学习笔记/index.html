@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="rtos学习笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="rtos学习笔记">
+<meta property="og:url" content="http://example.com/2024/08/07/rtos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="rtos学习笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/picture/image-20240811181611297.png">
+<meta property="article:published_time" content="2024-08-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-08T03:56:16.704Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="实时操作系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/picture/image-20240811181611297.png">
+
+<link rel="canonical" href="http://example.com/2024/08/07/rtos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>rtos学习笔记 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/07/rtos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          rtos学习笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-08-07T00:00:00+08:00">2024-08-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-08 11:56:16" itemprop="dateModified" datetime="2024-10-08T11:56:16+08:00">2024-10-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>rtos学习笔记</p>
+<span id="more"></span>
+
+<h1 id="Freertos"><a href="#Freertos" class="headerlink" title="Freertos"></a>Freertos</h1><h5 id="指针的理解"><a href="#指针的理解" class="headerlink" title="指针的理解"></a>指针的理解</h5><ul>
+<li><p>首先指针的一种数据类型，int*指的是指向int数据类型的指针，char *指的是指向char数据类型的指针</p>
+</li>
+<li><p>&amp;x，的意思是取x的地址<br>ptr储存的是所指向数据的地址</p>
+<p>*ptr（pointer）是访问指针指向的数据</p>
+</li>
+<li><p>void *，不确定类型指针，可以赋值给任何类型的指针。</p>
+</li>
+<li><p>buf[i]<br>即访问指针 <code>buf</code> 所指向的地址加上 <code>i</code> 的偏移量处的值。这是索引，不是数组</p>
+</li>
+</ul>
+<h5 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h5><ul>
+<li>申请一个内存块，这个内存块就是堆，可以取出一部分内存拿来用，用完要释放回去。<strong>是用户管理的</strong></li>
+</ul>
+<h5 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h5><ul>
+<li>系统自动分配，也是一个内存块，SP指针指向总栈的入口，并且在汇编文件里面都会定义sp指针指向的首地址</li>
+<li>每执行一个函数，不论是子函数还是主函数，比如执行main函数<br>第一步：把函数返回地址给LR<br>第二部：执行函数main，并且在执行main的开头，会首先在总栈中划分出main函数的栈，栈里面存储了返回地址LR的值，以及各种局部变量。</li>
+</ul>
+<h5 id="操作系统是什么"><a href="#操作系统是什么" class="headerlink" title="操作系统是什么"></a>操作系统是什么</h5><ul>
+<li>操作系统就是第一个裸机程序，是用来给之后的程序配置好运行环境的，向上提供接口，向下控制硬件。</li>
+<li>几大功能模块分别是内存管理， 进程管理、文件系统、设备驱动、网络协议栈。</li>
+</ul>
+<h5 id="典型的实时操作系统"><a href="#典型的实时操作系统" class="headerlink" title="典型的实时操作系统"></a>典型的实时操作系统</h5><p>典型的实时操作系统有<strong>VxWorks，RT-Thread，</strong>uCOS，QNX，WinCE，freertos</p>
+<h3 id="freertos移植到G431"><a href="#freertos移植到G431" class="headerlink" title="freertos移植到G431"></a>freertos移植到G431</h3><p><img src="/../picture/image-20240811181611297.png" alt="image-20240811181611297"></p>
+<ul>
+<li>首先是freertos的源码demo里面没有g431的demo，只能找一个M4内核的demo来修改，为了方便，就只保留要用的核和一个common文件，别的都删了</li>
+<li>然后从demo里面打开工程，如果没有工程的话，就要自己去cube里面新建一个工程</li>
+<li>去新工程的core文件夹，再去inc和src子文件夹新建一个BSP文件夹</li>
+<li>freertos源码中，主要是移植source里面的东西<ul>
+<li>新建一个Freertos文件夹，用来保存freertos的源码，并且把源码source里面要用的东西移植过去</li>
+<li>注意RVDS里面的架构文件，有.h文件的话要丢到inc里面</li>
+<li>然后把source的头文件丢到inc，记得在keil里面更改一下.h文件的索引</li>
+</ul>
+</li>
+<li>demo的作用只是提供配置用的.h文件<ul>
+<li>然后是把demo里面的要用的.h文件也移植到inc层</li>
+<li>如果有报错就去把宏定义关了</li>
+</ul>
+</li>
+</ul>
+<h3 id="小的知识"><a href="#小的知识" class="headerlink" title="小的知识"></a>小的知识</h3><h4 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h4><ul>
+<li>用来检查函数是否出错的，如果出错会通过串口打印信息，方便debug，会耗费资源，一般不用</li>
+</ul>
+<h3 id="抢占式调度和协程式调度"><a href="#抢占式调度和协程式调度" class="headerlink" title="抢占式调度和协程式调度"></a>抢占式调度和协程式调度</h3><ul>
+<li>协程式调度<ul>
+<li>是现在正在运行的任务主动释放cpu，才能切换到下一个任务，切换的主动权是在正在运行的任务手里， 优点是节省资源，但是现在的MCU都很强大，不缺这点，一般直接就抢占式调度了。</li>
+</ul>
+</li>
+</ul>
+<h3 id="创建静态任务和动态任务"><a href="#创建静态任务和动态任务" class="headerlink" title="创建静态任务和动态任务"></a>创建静态任务和动态任务</h3><ol>
+<li><h4 id="动态创建任务和静态创建任务的区别"><a href="#动态创建任务和静态创建任务的区别" class="headerlink" title="动态创建任务和静态创建任务的区别"></a>动态创建任务和静态创建任务的区别</h4><ul>
+<li>静态创建任务，任务栈、任务控制块的内存，是由用户自己去分配的，这部分内存是独立与freertos管理的内存的。</li>
+<li>动态创建任务，任务栈、任务控制块的内存，是由freertos在它管理的堆内存里面去动态分配</li>
+</ul>
+</li>
+<li><p>步骤</p>
+<ul>
+<li>首先要把中断优先级分组改成4，然后才是各种初始化</li>
+</ul>
+</li>
+</ol>
+<h4 id="b站视频的F103的移植方法"><a href="#b站视频的F103的移植方法" class="headerlink" title="b站视频的F103的移植方法"></a>b站视频的F103的移植方法</h4><ul>
+<li>由于有demo，而且demo里面自带工程，就直接在工程里面删掉</li>
+<li>然后是根据开发手册来看要保留什么文件，没用的全删了，，为了方便，把demo里面除了要用的核全删了，但是别把commom给删了</li>
+<li>b站视频是直接实现串口显示字符欸</li>
+</ul>
+<h3 id="中断管理"><a href="#中断管理" class="headerlink" title="中断管理"></a>中断管理</h3><ol>
+<li>经典问题<ul>
+<li>为什么pendSV和sisTick的中断优先级是最低优先级？<ul>
+<li>防止任务切换去阻塞别的中断响应，因为任务切换是通过pendSV的中断来实现的，配置到最低优先级，别的中断可以打断这个任务，但是这个任务不能阻塞到别的中断。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>freertos的个人理解<ul>
+<li>主要是通过BASEPRI这个中断屏蔽寄存器，通过freertos的软件编码，来实现对rtos所管理的优先级范围内（一般是5-15）的中断的开关。但是超出范围外的优先级的中断就管不了了</li>
+<li>BASEPRI的寄存器是设定一个阈值，比如说设置成6，那么0-5是正常的，6-15屏蔽，rtos的中断管理实质就是把5赋予给BASRPRI，使得5-15的中断都用不了，但是注意这个赋值是有偏移量的，偏移量是4位，因为中断优先级寄存器只用到了高四位。</li>
+</ul>
+</li>
+<li>注意事项<ul>
+<li>freertos的延时函数，原理上是用来了临界区，所以会需要用到中断，会把中断管理打开，所以要屏蔽一段时间中断的话，不能用freertos的延时。</li>
+</ul>
+</li>
+</ol>
+<h3 id="hal库定时器的实现"><a href="#hal库定时器的实现" class="headerlink" title="hal库定时器的实现"></a>hal库定时器的实现</h3><ul>
+<li><strong>如果发现有奇怪的东西没有定义的话，去看一看config文件，可能是宏没开</strong></li>
+</ul>
+<h3 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h3><h4 id="如果是IO口的中断"><a href="#如果是IO口的中断" class="headerlink" title="如果是IO口的中断"></a>如果是IO口的中断</h4><ul>
+<li>实现流程就是配置好IO口，然后配置对应中断优先级、中断使能。</li>
+<li>之后对应的IO口或者内部定时器触发中断之后，会自动调用一个独属于自己的中断服务函数。是弱定义的，需要我们找出这个中断服务函数并且重定义。如果要找这个具体的中断服务函数的话，需要手动搜索IRQhandler，鼠标右键出不来。</li>
+<li>找出这个中断服务函数之后，一般是直接调用总的总段服务函数，如果是exti就用通用的EXTI中断服务函数，如果是定时器就用定时器通用的中断服务函数。但是记得，调用通用的中断服务函数的时候，需要给入口参数。通用的中断服务函数里面，会根据给的入口参数，去判断执行对应的代码，清除对应的标志位，最后又调用对应的回调函数。</li>
+<li>回调函数也有通用的回调函数，通用中断服务函数调用它的时候就已经自动传入了入口参数，然后逻辑代码部分一般都是在回调函数里面写。</li>
+</ul>
+<h3 id="rtos的移植"><a href="#rtos的移植" class="headerlink" title="rtos的移植"></a>rtos的移植</h3><ul>
+<li>FreeRTOSConfig.h  文件需要手动修改，但是太难了，直接用野火改好的得了。</li>
+<li>加头文件路径，有三个地方，一个是includ，另一个是port里面对应内核的文件夹还有一个.h文件，FreeRTOSConfig.h直接加在User文件夹，所以也要添加</li>
+<li>要串口头文件？</li>
+<li>还要改it文件，freertos和hal库都定义了pendsv和sistick中断，重定义了，让hal的回调freertos就行。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 实时操作系统</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/08/07/%E4%BA%8C%E8%BD%AE%E9%A9%B1%E5%8A%A8%E5%B0%8F%E8%BD%A6%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/" rel="prev" title="二轮平衡车实战项目">
+      <i class="fa fa-chevron-left"></i> 二轮平衡车实战项目
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/09/10/%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF%E7%9A%84%E5%88%9D%E8%AF%86/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Freertos"><span class="nav-number">1.</span> <span class="nav-text">Freertos</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%8C%87%E9%92%88%E7%9A%84%E7%90%86%E8%A7%A3"><span class="nav-number">1.0.0.0.1.</span> <span class="nav-text">指针的理解</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A0%86"><span class="nav-number">1.0.0.0.2.</span> <span class="nav-text">堆</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">1.0.0.0.3.</span> <span class="nav-text">栈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.0.0.0.4.</span> <span class="nav-text">操作系统是什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.0.0.0.5.</span> <span class="nav-text">典型的实时操作系统</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#freertos%E7%A7%BB%E6%A4%8D%E5%88%B0G431"><span class="nav-number">1.0.1.</span> <span class="nav-text">freertos移植到G431</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E7%9A%84%E7%9F%A5%E8%AF%86"><span class="nav-number">1.0.2.</span> <span class="nav-text">小的知识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%AD%E8%A8%80"><span class="nav-number">1.0.2.1.</span> <span class="nav-text">断言</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%A2%E5%8D%A0%E5%BC%8F%E8%B0%83%E5%BA%A6%E5%92%8C%E5%8D%8F%E7%A8%8B%E5%BC%8F%E8%B0%83%E5%BA%A6"><span class="nav-number">1.0.3.</span> <span class="nav-text">抢占式调度和协程式调度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%8A%A8%E6%80%81%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.0.4.</span> <span class="nav-text">创建静态任务和动态任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E4%BB%BB%E5%8A%A1%E5%92%8C%E9%9D%99%E6%80%81%E5%88%9B%E5%BB%BA%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.0.4.1.</span> <span class="nav-text">动态创建任务和静态创建任务的区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b%E7%AB%99%E8%A7%86%E9%A2%91%E7%9A%84F103%E7%9A%84%E7%A7%BB%E6%A4%8D%E6%96%B9%E6%B3%95"><span class="nav-number">1.0.4.2.</span> <span class="nav-text">b站视频的F103的移植方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD%E7%AE%A1%E7%90%86"><span class="nav-number">1.0.5.</span> <span class="nav-text">中断管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hal%E5%BA%93%E5%AE%9A%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.0.6.</span> <span class="nav-text">hal库定时器的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E6%96%AD"><span class="nav-number">1.0.7.</span> <span class="nav-text">中断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%98%AFIO%E5%8F%A3%E7%9A%84%E4%B8%AD%E6%96%AD"><span class="nav-number">1.0.7.1.</span> <span class="nav-text">如果是IO口的中断</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rtos%E7%9A%84%E7%A7%BB%E6%A4%8D"><span class="nav-number">1.0.8.</span> <span class="nav-text">rtos的移植</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">25k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:32</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

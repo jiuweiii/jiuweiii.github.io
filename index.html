@@ -120,17 +120,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">2</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
 
   </li>
   </ul>
@@ -162,7 +162,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/19/%E9%9B%86%E4%B8%AD%E5%AE%9E%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/11/32%E7%9A%84hal%E5%BA%93%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -176,7 +176,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024/07/19/%E9%9B%86%E4%B8%AD%E5%AE%9E%E4%B9%A0/" class="post-title-link" itemprop="url">大三下暑期任务</a>
+            <a href="/2024/09/11/32%E7%9A%84hal%E5%BA%93%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">未命名</a>
         </h2>
 
         <div class="post-meta">
@@ -186,14 +186,519 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2024-07-19 00:00:00" itemprop="dateCreated datePublished" datetime="2024-07-19T00:00:00+08:00">2024-07-19</time>
+              <time title="创建时间：2024-09-11 22:50:22" itemprop="dateCreated datePublished" datetime="2024-09-11T22:50:22+08:00">2024-09-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-07-26 20:00:29" itemprop="dateModified" datetime="2024-07-26T20:00:29+08:00">2024-07-26</time>
+                <time title="修改时间：2024-09-29 11:19:52" itemprop="dateModified" datetime="2024-09-29T11:19:52+08:00">2024-09-29</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="比较重要的技巧"><a href="#比较重要的技巧" class="headerlink" title="比较重要的技巧"></a>比较重要的技巧</h3><h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ol>
+<li>F7，快速编译</li>
+<li>取消注释ctr + shit +数字·</li>
+</ol>
+<h4 id="调试技巧"><a href="#调试技巧" class="headerlink" title="调试技巧"></a>调试技巧</h4><ol>
+<li>如果想要不手动取消断点也能结束仿真，可以把源码路径改浅</li>
+</ol>
+<h3 id="c代码基础"><a href="#c代码基础" class="headerlink" title="c代码基础"></a>c代码基础</h3><h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><ol>
+<li><p>对于 *p 来说，p是指针， 星号 是取数，&amp;是取地址；就把指针当成是地址就行了，注意数组c【3】，c就是一个指针</p>
+</li>
+<li><p>指向指针的指针</p>
+<ul>
+<li><p><img src="/../picture/image-20240919194832165.png" alt="image-20240919194832165"> </p>
+<p>首先  * ptr_address，的星，表示ptr_address是指针类型</p>
+<p>然后，所指向的ptr2，是指针类型，所以前面还要加一个 int *</p>
+<p>如果难以理解，就用上面的例子理解，* ptr2，是定义ptr2是指针类型，前面的int，是因为指向的var是int类型，所以int * * ptr_address的int *，就相当于是int * ptr2的int</p>
+</li>
+</ul>
+</li>
+<li><p>指针的赋值</p>
+<ul>
+<li><p><img src="/../picture/image-20240919195307503.png" alt="image-20240919195307503"></p>
+<p>一般是定义和赋值一起做，算是特定格式了，要记住</p>
+<p>但是也能定义了再赋予地址：<br><img src="/../picture/image-20240919195637254.png" alt="image-20240919195637254"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="仿真器和调试器"><a href="#仿真器和调试器" class="headerlink" title="仿真器和调试器"></a>仿真器和调试器</h3><ol>
+<li>仿真器和调试器的来源<ul>
+<li>以前做芯片开发的时候，debug的时候，cpu不能单步运行，要么是软件仿真，要么是硬件仿真，模拟cpu，来实现单步运行。但是以前一种芯片只能用特定的那一款仿真器，又贵，换一个芯片就必须同时换一个仿真器。后面就把cpu升级了，让cpu能够单步运行了，是通过JTAG来连接调试器，如果有调试器就可以让cpu进入调试模式，调试模式里面可以单步运行，如果不接调试器就是正常情况下一下子全部运行了，当然这个JTAG的功能不只是单步执行。最关键的是，调试器可以调试不同的cpu，只要接口是符合JTAG就行</li>
+</ul>
+</li>
+<li>常用的调试器接口<ul>
+<li>JTAG（读作 j   tag ），是一个调试接口，几乎所有的cpu都能用JTAG，是一个通用标准，绝大多数人都用这个</li>
+<li>SWD，和JTAG相比，最大的区别其实只是占用的gpio个数，SWD占用的GPIO少一点，而JTAG就比较标准，比较完善</li>
+</ul>
+</li>
+</ol>
+<h3 id="32的三种编程方法"><a href="#32的三种编程方法" class="headerlink" title="32的三种编程方法"></a>32的三种编程方法</h3><ol>
+<li>直接寄存器操作<ul>
+<li>这是最底层的操作方法，但是要对芯片的寄存器非常熟悉，而且非常的麻烦，一旦换一个新芯片，又要重新熟悉寄存器</li>
+</ul>
+</li>
+<li>标准库<ul>
+<li>由于直接操作寄存器太麻烦，官方就直接把常用内部外设的实现函数全部写成了函数收到库里面，然后给到头文件我们，我们要用的时候只需要调用就行了。但是缺点是，只有内部外设相关的函数，如果我们要拓展开去实现更多的功能，像（乱七八糟的高级功能）就用不了标准库了。</li>
+</ul>
+<p>	</p>
+</li>
+<li>HAL库<ul>
+<li>解决了标准库的很大一部分的缺陷，有很多集成的功能函数，有点像一个操作系统了，</li>
+</ul>
+</li>
+</ol>
+<h3 id="ISP"><a href="#ISP" class="headerlink" title="ISP"></a>ISP</h3><ol>
+<li>ISP是什么<ul>
+<li>英文就是（In system programming），就是在系统烧录</li>
+<li>以前的话，是要用专门的烧录器把代码烧录进芯片flash里面，很麻烦。</li>
+<li>所以，不用烧录器就能把代码下载到flash里面的技术就叫做ISP</li>
+<li>现在一般是PC通过串口把hex文件isp到falsh里面，</li>
+<li>isp的过程，是涉及到32的架构原理，首先是从系统存储区启动来把代码烧录进flash，烧录完成之后重启，就是在用户存储区启动了。</li>
+<li>然后呢，系统存储器里面存的是stm32一出厂就被固化了的bootloader程序，boot是启动，loader是装载器，就是启动装载器，如果是boot1、boot0是10的话，就会系统存储器启动，然后就能够通过串口给flash烧录代码，然后重启的话就是在用户存储器启动了</li>
+</ul>
+</li>
+</ol>
+<h3 id="spi"><a href="#spi" class="headerlink" title="spi"></a>spi</h3><ol>
+<li>串行外设接口，spi是一个通讯协议</li>
+</ol>
+<h3 id="RTC，real-time-clock，实时时钟模块"><a href="#RTC，real-time-clock，实时时钟模块" class="headerlink" title="RTC，real time clock，实时时钟模块"></a>RTC，real time clock，实时时钟模块</h3><ul>
+<li><p>是一个独立的定时器，配置之后可以让它精确的每秒触发一次中断，可以修改计数值来改变当前的日期，可以通过计数器的值来算出当前的年月日时分秒。当VDD有效时，VDD供电。断电之后，需要独立电池继续供电，所以断电之后计数器还会继续运作。</p>
+</li>
+<li><p>通过VBAT引脚和 CR1220电池供电</p>
+</li>
+</ul>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><ol>
+<li>定义<ul>
+<li>预处理是编译前的一个步骤</li>
+<li>所有预处理代码都是以 # 开头</li>
+<li>一般就三大常用<ol>
+<li>宏<ul>
+<li>本质是用预处理器进行了一个文本替换工作</li>
+<li>如果要重复用到某个比较简单的逻辑，要么用宏，要么用函数。但是只是处理简单的逻辑的话，用函数比较浪费资源，所以用宏好点。用宏对比手搓的话，最大的好处是，要修改逻辑可以直接替换宏体</li>
+</ul>
+</li>
+<li>#include “ 文件名  ”  或者 #include &lt;文件名&gt; <ul>
+<li>意思是编译之前就用预处理器把这一行代码替换成引用的文件，和当前的代码文件相连接起来</li>
+<li>用 “ ” 的话一般是自己定义的c文件，用&lt;&gt;就一般是系统文件</li>
+</ul>
+</li>
+<li>条件编译，#ifdef  &#x2F;  #ifndef     配合  #endif 使用<ul>
+<li>在预处理阶段加入条件编译的逻辑，可能有某部分在某条件下不用进行预处理。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ol>
+<li>操作系统是什么<ul>
+<li>有点像公司的管理部门，不去直接实现技术的东西，他的工作是让公司分好层，分好模块，分好部门，能够更有效率的去工作。如果是以前的51板子的话，一共就那么一点点的内存，那么就不需要什么系统，直接上裸机开发，写的每一句代码都是直接去干活的，都是直接能够实现实际功能的。但是32几十K甚至几百M的内存，以及项目变得复杂之后，就不能硬着头皮去裸机开发了，就需要去对内存资源进行管理。就是分层，分模块，按照不同的功能分开<strong>（搞不太懂操作系统，等以后补充吧）</strong></li>
+</ul>
+</li>
+</ol>
+<p>tcpip协议？<br>lwip</p>
+<p>low wait ip</p>
+<p>实现文件系统？移植第三方文件系统？</p>
+<p>gui？</p>
+<p>内存管理方面，和boot</p>
+<h3 id="内存相关"><a href="#内存相关" class="headerlink" title="内存相关"></a>内存相关</h3><h4 id="rom"><a href="#rom" class="headerlink" title="rom"></a>rom</h4><ul>
+<li>只读，断电保存，用来长期保存数据，读写比较慢</li>
+<li>最常用的是eeprom，电可擦，断电保存，</li>
+<li>32都用flash，不用rom</li>
+</ul>
+<h4 id="ram"><a href="#ram" class="headerlink" title="ram"></a>ram</h4><ul>
+<li>断电数据丢失，临时的内存区，读写快</li>
+<li>常用sram，低功耗，静态ram，不用刷新</li>
+<li>比如说，用来存放代码运行过程中，值会改变的变量</li>
+</ul>
+<h4 id="flash"><a href="#flash" class="headerlink" title="flash"></a>flash</h4><ul>
+<li>集合了rom和ram的优点，断电保存，速度快，电可擦</li>
+<li>很多32单片机的内存组成就是flash + sram</li>
+<li>保存代码程序，以及各种初始值，以及常量</li>
+</ul>
+<p>使用过程中，flash可以满，但是ram要预留百分之十的空间</p>
+<h3 id="锁相环（简称PLL）"><a href="#锁相环（简称PLL）" class="headerlink" title="锁相环（简称PLL）"></a>锁相环（简称PLL）</h3><ul>
+<li>作用是，能够把晶振的频率倍频成各种各样的频率，在保证系统只有一个晶振的前提下，满足不同设备的工作频率需求。</li>
+</ul>
+<h4 id="最简单的基本原理和内部组成"><a href="#最简单的基本原理和内部组成" class="headerlink" title="最简单的基本原理和内部组成"></a>最简单的基本原理和内部组成</h4><ol>
+<li><p>最简单的基本原理<img src="/../picture/image-20240911230242585.png" alt="image-20240911230242585">f1一般是晶振电路的输入，f2是输出</p>
+</li>
+<li><p>压控振荡器（VCO）</p>
+<ul>
+<li>功能是根据输入的电压，输出对应的频率，输出的频率可以达非常高的程度</li>
+<li>反馈调节是为了保证输入稳定</li>
+</ul>
+</li>
+<li><p>鉴相器</p>
+<ul>
+<li><p>作用是保证 f1 和 f2 的相位、频率一致，从而使得压控振荡器的输入稳定</p>
+</li>
+<li><p><img src="/../picture/image-20240911225710403.png" alt="image-20240911225710403"></p>
+<p>原理是在f1和f2相位或者频率不同的位置输出，从而使得f2跟随f1</p>
+</li>
+</ul>
+</li>
+<li><p>低通滤波器</p>
+<ul>
+<li>由于鉴相器的输入是矩形波，要用滤波器使其输出变得平滑。</li>
+</ul>
+</li>
+<li><p>分频器</p>
+<ul>
+<li>16倍频，就是输入16个脉冲，它才输出1个脉冲。所以能把1600M变成100M</li>
+</ul>
+</li>
+</ol>
+<h3 id="CH340"><a href="#CH340" class="headerlink" title="CH340"></a>CH340</h3><ul>
+<li>常见型号是CH340c、CH340g</li>
+<li>是USB转TTL（串口）下载模块</li>
+</ul>
+<h3 id="各种公司的关系"><a href="#各种公司的关系" class="headerlink" title="各种公司的关系"></a>各种公司的关系</h3><ul>
+<li>ARM开发CM4、CM3内核和调试系统</li>
+<li>ST公司用这个内核以及调试系统，并且自己加了一大堆外设整出来stm32芯片</li>
+<li>再高一层的公司就用这个芯片去设计各种各样的开发板</li>
+</ul>
+<h3 id="寄存器，存储器的映射"><a href="#寄存器，存储器的映射" class="headerlink" title="寄存器，存储器的映射"></a>寄存器，存储器的映射</h3><ol>
+<li>寄存器的映射<ul>
+<li>寄存器是32单片机内部的特殊内存，可以通过修改这些内存的值来控制单片机的功能。对这部分的内存进行命名的过程就叫做寄存器的映射。</li>
+</ul>
+</li>
+<li>存储器的映射<ul>
+<li>32单片机把系统的所有结构，包括flash、sram、各种外设等等东西全部放在了一个4GB的线性的地址空间里面，这个空间就是存储器。但是存储器是没有地址这种说法的，我们给存储器分配地址的过程就是存储器的映射，比如说分配这一段地址是干什么的，是存储什么信息的，还是说作为一个寄存器地址控制什么功能的，由我们来分配。是在.h文件定义好了的。<ul>
+<li>过程就是先定义外设寄存器的结构体的类型。然后定义外设基地址。然后定义寄存器地址</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="板子分布图"><a href="#板子分布图" class="headerlink" title="板子分布图"></a>板子分布图</h3><p><img src="/../picture/image-20240924155917762.png" alt="image-20240924155917762"></p>
+<h3 id="cubemx"><a href="#cubemx" class="headerlink" title="cubemx"></a>cubemx</h3><h4 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h4><p><img src="/../picture/image-20240923160515395.png" alt="image-20240923160515395"></p>
+<h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><h4 id="内部时钟源"><a href="#内部时钟源" class="headerlink" title="内部时钟源"></a>内部时钟源</h4><ol>
+<li><p>来源于RC振荡器，R是电阻，C是电容</p>
+</li>
+<li><p><img src="/../picture/image-20240923164227804.png" alt="image-20240923164227804"></p>
+<p><img src="/../picture/image-20240923164240547.png" alt="image-20240923164240547"></p>
+<ol>
+<li>维恩电桥作用<ul>
+<li>经过它的信号不会产生任何的相移</li>
+<li>能够通过调整参数来选择不同频率的信号</li>
+</ul>
+</li>
+<li>电路原理<ul>
+<li>由维恩电桥获取需要的频率信号，然后不断放大直到稳定</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="裸机系统和多任务系统"><a href="#裸机系统和多任务系统" class="headerlink" title="裸机系统和多任务系统"></a>裸机系统和多任务系统</h3><p><img src="/../picture/image-20240924203046484.png" alt="image-20240924203046484"></p>
+<h4 id="裸机系统"><a href="#裸机系统" class="headerlink" title="裸机系统"></a>裸机系统</h4><ul>
+<li>由轮询系统和前后台系统组成</li>
+</ul>
+<h5 id="轮询系统"><a href="#轮询系统" class="headerlink" title="轮询系统"></a>轮询系统</h5><ul>
+<li>就是用一个无限循环按照顺序反复运行代码，对于不需要外部事件响应就能完成的事情，轮询系统完全够用了。但是如果用到了外部事件响应，比如说ABCD四个函数，B是按键检测，刚刚好运行到C的时候，按下了案件，又刚刚好CD运行时间非常长，还没有循环到B，我就松开了案件，这样的话就会丢失事件。</li>
+</ul>
+<h5 id="前后台系统"><a href="#前后台系统" class="headerlink" title="前后台系统"></a>前后台系统</h5><ul>
+<li>就是在轮询系统加了个中断，后台是main函数，前台就是中断。 外部事件的响应在前台完成，如果事件处理比较简单，顺手在前台完成也行，但是事件的处理如果比较复杂的话，前台就给个标志位，然后返回后台，紧急事件的处理还是回到后台来完成。对比与轮询系统的话，就是保证了外部的响应它不会丢失。然后呢中断是有可嵌套性，用好了可以大大提升紧急事件处理的实时性。但是本质上，还是在后台主程序上去执行事件处理，如果功能复杂的话，就要对执行流要规划好，很麻烦。</li>
+</ul>
+<h5 id="多任务系统"><a href="#多任务系统" class="headerlink" title="多任务系统"></a>多任务系统</h5><ul>
+<li>事件响应是在中断完成，事件处理是在任务里面完成，每个任务是独立的，互不影响。什么是任务呢，把主程序分成每一个单独的不影响的小程序来分别独立执行，就是任务。</li>
+<li>然后呢，中断的响应有一个优先级，并且每个任务它也有优先级。一个紧急事件被中断标记之后，如果事件对应的任务的优先级高，那么就可以做到马上响应。而且不用费尽心思去把紧急事件的处理去嵌套到各种地方里面去，也不用对执行流去太过规划。</li>
+</ul>
+<h3 id="链表与节点（对应列表与列表项）"><a href="#链表与节点（对应列表与列表项）" class="headerlink" title="链表与节点（对应列表与列表项）"></a>链表与节点（对应列表与列表项）</h3><p><img src="/../picture/image-20240924203810695.png" alt="image-20240924203810695"></p>
+<p>​		分为单向链表和双向链表，大多数情况下都是用的双向链表</p>
+<p>链表是通过节点把离散的数据链接成一个表，通过对节点的插入和删除操作从而实现</p>
+<p>对数据的存取。而数组是通过开辟一段连续的内存来存储数据，这是数组和链表最大的区</p>
+<p>别。</p>
+<p>。通常的做法是节点里面只包含一个用于指向下一个</p>
+<p>节点的指针。要通过链表存储的数据内嵌一个节点即可，这些要存储的数据通过这个内嵌</p>
+<p>的节点即可挂接到链表中，<img src="/../picture/image-20240925204108883.png" alt="image-20240925204108883"></p>
+<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><ul>
+<li>​		多任务系统中，任务按照一定的时序不停的切换来执行，让人看起来像是同时执行多任务一样。</li>
+<li>在裸机系统中，代码就是在main主程序里面顺序执行的无限循环，而多任务的话，是把主程序按照功能不同拆分成不同的任务程序，每个任务相互独立，无限循环，无法返回。</li>
+</ul>
+<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><ul>
+<li><h4 id="栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间"><a href="#栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间" class="headerlink" title="栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间"></a>栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间</h4></li>
+</ul>
+<h1 id="常见bug"><a href="#常见bug" class="headerlink" title="常见bug"></a>常见bug</h1><h3 id="无法下载编译M3内核"><a href="#无法下载编译M3内核" class="headerlink" title="无法下载编译M3内核"></a>无法下载编译M3内核</h3><p><img src="/../picture/image-20240925215836310.png" alt="image-20240925215836310"></p>
+<p><img src="/../picture/image-20240925215803591.png" alt="image-20240925215803591"></p>
+<p>debug里面改一改选项就行</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/10/%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF%E7%9A%84%E5%88%9D%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/09/10/%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF%E7%9A%84%E5%88%9D%E8%AF%86/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-09-10 22:09:21" itemprop="dateCreated datePublished" datetime="2024-09-10T22:09:21+08:00">2024-09-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-11 22:50:05" itemprop="dateModified" datetime="2024-09-11T22:50:05+08:00">2024-09-11</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>883</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="FPGA"><a href="#FPGA" class="headerlink" title="FPGA"></a>FPGA</h3><ol>
+<li>现场可编程门阵列<ul>
+<li>门理解为逻辑单元</li>
+<li>现场可编程表示编程灵活</li>
+<li>可以直接通过编程改变硬件架构的一块开发板，灵活性强，但是贵而且难</li>
+</ul>
+</li>
+</ol>
+<h3 id="锁相环、晶振、频率（英文简称PLL）"><a href="#锁相环、晶振、频率（英文简称PLL）" class="headerlink" title="锁相环、晶振、频率（英文简称PLL）"></a>锁相环、晶振、频率（英文简称PLL）</h3><ol>
+<li>定义<ul>
+<li>按照常理来说，芯片的工作频率取决于晶振，而晶振经过锁相环电路，可以放大频率输出给芯片</li>
+<li>同理，总线的频率是100M，也可以通过锁相环把频率放大输出到别的线路</li>
+</ul>
+</li>
+</ol>
+<h3 id="qt"><a href="#qt" class="headerlink" title="qt"></a>qt</h3><p>图形化界面开发平台，跨平台开发框架，开发的界面、上位机、app能够移植到各个系统，用的语言是c++</p>
+<h3 id="32开发的hal库"><a href="#32开发的hal库" class="headerlink" title="32开发的hal库"></a>32开发的hal库</h3><p>开发单片机是直接使用寄存器操作，还是用hal库函数操作</p>
+<p>hal库就是直接用cube mx直接生成初始化代码，还有专门的社区分享讨论</p>
+<h3 id="实时操作系统"><a href="#实时操作系统" class="headerlink" title="实时操作系统"></a>实时操作系统</h3><ol>
+<li>常见的有<ul>
+<li>freertos、ucos、Vx、RTT、linux</li>
+</ul>
+</li>
+</ol>
+<h3 id="奇怪的知识"><a href="#奇怪的知识" class="headerlink" title="奇怪的知识"></a>奇怪的知识</h3><ul>
+<li>低端的MCU通常是采集和控制，高端的MCU通常是数据处理和深度学习模型的训练</li>
+</ul>
+<h3 id="嵌入式软件开发"><a href="#嵌入式软件开发" class="headerlink" title="嵌入式软件开发"></a>嵌入式软件开发</h3><ol>
+<li>底层的驱动开发<ul>
+<li>就是让硬件能够跑起来（手操寄存器）</li>
+</ul>
+</li>
+<li>上层的人机交互界面<ul>
+<li>用到的语言是c++</li>
+<li>就是上位机开发</li>
+<li>MFC、qt用来做界面开发、机器视觉方面的应用就用opencv</li>
+</ul>
+</li>
+<li>数据结构和算法</li>
+</ol>
+<h3 id="乱七八糟的协议"><a href="#乱七八糟的协议" class="headerlink" title="乱七八糟的协议"></a>乱七八糟的协议</h3><ol>
+<li><p>usb协议、spi协议、ur协议、iic总线、spi通信、can总线、如何连接wifi、如何连接蓝牙、如何连接以太网接口、mqtt（通信协议，物联网用）</p>
+</li>
+<li><p>外设<br>RFID、如何控制入门电机、连接常见的传感器、wifi UR 蓝牙是怎么通信的</p>
+</li>
+<li><p>轻量级的系统</p>
+<p>ucos、freertos并发多任务的处理</p>
+</li>
+<li><p>原理图和pcb的绘制</p>
+</li>
+</ol>
+<h3 id="架构、框架"><a href="#架构、框架" class="headerlink" title="架构、框架"></a>架构、框架</h3><h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><ol>
+<li><p>linux是什么</p>
+<ul>
+<li>是和ucos、freertos一样的操作系统，只是比他们更大，更完善。</li>
+</ul>
+</li>
+<li><p>linux组成</p>
+<ul>
+<li>由linux内核、图形化桌面环境、应用软件、gnu工具</li>
+<li>linux内核：系统内存管理、软件程序管理、硬件设备管理、文件系统管理。</li>
+</ul>
+</li>
+</ol>
+<h4 id="linux的四个大方向"><a href="#linux的四个大方向" class="headerlink" title="linux的四个大方向"></a>linux的四个大方向</h4><ol>
+<li><p>应用程序开发（应用层开发）</p>
+<ul>
+<li>在能跑linux内核的硬件平台或者arm平台上，开发应用程序，大多数是人机界面，实现数据处理、用户界面、通信等<ul>
+<li>会c&#x2F;c++</li>
+<li>人机界面交互基础</li>
+<li>linux下的多线程并发开发的基础知识</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>linux内核及驱动开发</p>
+<ul>
+<li>内核裁剪、移植<ul>
+<li>要懂硬件</li>
+<li>要懂处理器的架构</li>
+</ul>
+</li>
+<li>内核定制</li>
+<li>驱动程序定制<ul>
+<li>要懂硬件</li>
+<li>驱动的程序分为三大类，都有自己的编写套路和框架<ul>
+<li>字符设备</li>
+<li>call设备</li>
+<li>网络设备</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>设备驱动开发</p>
+<ul>
+<li>和硬件设备交互，编写设备驱动程序，实现应用程序和设备，设备与设备之间的通信和控制</li>
+</ul>
+</li>
+<li><p>系统配置与优化</p>
+<ul>
+<li>选择适当的内核配置、调整系统参数、优化资源利用</li>
+</ul>
+</li>
+<li><p>软件包管理</p>
+<ul>
+<li>需要各种软件包和库来进行应用程序的开发，要了解软件包管理工具，要会怎么选择和安装适当的软件包</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>推荐线路</p>
+<ul>
+<li>从嵌入式应用工程师逐渐转到linux内核和底层开发岗</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/07/rtos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/07/rtos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">rtos学习笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-08-07T00:00:00+08:00">2024-08-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-10-08 11:56:16" itemprop="dateModified" datetime="2024-10-08T11:56:16+08:00">2024-10-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -211,7 +716,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>1.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -230,10 +735,105 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>集中实习笔记</p>
+          <p>rtos学习笔记</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024/07/19/%E9%9B%86%E4%B8%AD%E5%AE%9E%E4%B9%A0/#more" rel="contents">
+              <a class="btn" href="/2024/08/07/rtos%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/08/07/%E4%BA%8C%E8%BD%AE%E9%A9%B1%E5%8A%A8%E5%B0%8F%E8%BD%A6%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/08/07/%E4%BA%8C%E8%BD%AE%E9%A9%B1%E5%8A%A8%E5%B0%8F%E8%BD%A6%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/" class="post-title-link" itemprop="url">二轮平衡车实战项目</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-08-07 00:00:00" itemprop="dateCreated datePublished" datetime="2024-08-07T00:00:00+08:00">2024-08-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-08-11 17:18:18" itemprop="dateModified" datetime="2024-08-11T17:18:18+08:00">2024-08-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">实战项目</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>952</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>二轮平衡车实战项目</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2024/08/07/%E4%BA%8C%E8%BD%AE%E9%A9%B1%E5%8A%A8%E5%B0%8F%E8%BD%A6%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -288,7 +888,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-03 17:43:25" itemprop="dateModified" datetime="2024-08-03T17:43:25+08:00">2024-08-03</time>
+                <time title="修改时间：2024-08-07 17:17:16" itemprop="dateModified" datetime="2024-08-07T17:17:16+08:00">2024-08-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -306,14 +906,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
+              <span>4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>14 分钟</span>
+              <span>15 分钟</span>
             </span>
 
         </div>
@@ -383,7 +983,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-07-24 10:21:50" itemprop="dateModified" datetime="2024-07-24T10:21:50+08:00">2024-07-24</time>
+                <time title="修改时间：2024-08-09 14:24:28" itemprop="dateModified" datetime="2024-08-09T14:24:28+08:00">2024-08-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -401,14 +1001,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>234</span>
+              <span>557</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -538,6 +1138,902 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/23/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/10/23/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-10-23 15:15:20" itemprop="dateCreated datePublished" datetime="2023-10-23T15:15:20+08:00">2023-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-07 22:18:57" itemprop="dateModified" datetime="2024-04-07T22:18:57+08:00">2024-04-07</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>11k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>41 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h2><h5 id="芯片的内部资源总图在数据手册第二章第一节。"><a href="#芯片的内部资源总图在数据手册第二章第一节。" class="headerlink" title="芯片的内部资源总图在数据手册第二章第一节。"></a>芯片的内部资源总图在数据手册第二章第一节。</h5><h5 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h5><p>​		退出debug模式的时候一定要记得把所有断点清掉，否则会崩溃</p>
+<h5 id="输出输入模式怎么记"><a href="#输出输入模式怎么记" class="headerlink" title="输出输入模式怎么记"></a>输出输入模式怎么记</h5><p>输入输出模式是针对管脚（例如PI0），输出表示PI0管脚输出电压，输入模式表示外部电压输入电压到PI0端口，然后测量PI0的电压来控制。</p>
+<p>Flash是存代码的，Ram是存数据的</p>
+<h5 id="推挽和开漏的区别"><a href="#推挽和开漏的区别" class="headerlink" title="推挽和开漏的区别"></a>推挽和开漏的区别</h5><p>推挽（PP）和开漏（OD）是GPIO的mode；推挽可以直接输出高低电平，开漏要配上下拉；</p>
+<h5 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h5><p>ctrl + f可以搜索关键词<br>F12查看函数定义<br>F7编译当前代码<br>shift + tab取消缩进<br>ctrl+h替换<br>shift+上下左右  移动光标选中<br>ctrl+L当前行剪切<br>ctrl+tap跳转到对应的.h文件</p>
+<h5 id="常用代码思路"><a href="#常用代码思路" class="headerlink" title="常用代码思路"></a>常用代码思路</h5><ul>
+<li><p>异或翻滚</p>
+<p>ucled ^&#x3D; 0x88;<br>LED_Disp(ucled);<br>这样就能达到按一下第4、8个灯亮，再按一下4、8灯灭的效果。</p>
+</li>
+</ul>
+<h5 id="对或的理解"><a href="#对或的理解" class="headerlink" title="对或的理解"></a>对或的理解</h5><p>谁和0或，就是保持谁<br>谁和1或，都是翻转</p>
+<p>0 ^ 0 ，0和0或，0保持0<br>1 ^ 0 ，1和0或，1保持1<br>0 ^ 1 ，0和1或，0会0、1翻转<br>1 ^ 1 ，1和1或，1会0、1翻转<br>巧记：把或当成加法来记，加0就是保持，+1就是翻转，一般用来点灯<br>或的实质是找出两个数的不同的位</p>
+<p>0和0与，0结果是0<br>0和1与，0结果是0<br>1和0与，1变成0<br>1和1与，1不变<br>总结就是，谁和1与保持谁，谁和0与全部置0，一般用来灭灯<br>巧记：把与想象成乘法，乘1就是保持，乘0就是置0</p>
+<h2 id="debug-1"><a href="#debug-1" class="headerlink" title="debug"></a>debug</h2><h5 id="检查嘀嗒定时器"><a href="#检查嘀嗒定时器" class="headerlink" title="检查嘀嗒定时器"></a>检查嘀嗒定时器</h5><ul>
+<li>在debug过程中，设备→内核设备→嘀嗒定时器，然后步进就能看到嘀嗒定时器的config信息了</li>
+</ul>
+<h5 id="检查GPIO口"><a href="#检查GPIO口" class="headerlink" title="检查GPIO口"></a>检查GPIO口</h5><ul>
+<li>dubug过程中，设备→外设→GPIO，一般只看mod，如果初始化没问题那么对应的口的值就会变（mod的默认值是0x03，模拟模式）</li>
+</ul>
+<h5 id="检查变量的值"><a href="#检查变量的值" class="headerlink" title="检查变量的值"></a>检查变量的值</h5><ul>
+<li>直接右键变量→add “变<strong>量”to，即</strong>可。同时还能把查看变量的数字格式在16进制和10进制之间转换。</li>
+</ul>
+<h2 id="嘀嗒定时器"><a href="#嘀嗒定时器" class="headerlink" title="嘀嗒定时器"></a>嘀嗒定时器</h2><ol>
+<li>最重点的是记得uwTick是触发中断的次数</li>
+<li>嘀嗒定时器过多长时间触发一次中断的原理：UAL寄存器是倒数计数器，倒数到0，另一个寄存器就会+1来表示一次中断，并且对UAL进行重载。如果分配给内核的频率是80M，那么当UAL的初值设为80的时候，就表示是80M分之80中断一次，即为1微秒中断一次；如果初值是80k，那么就是1毫秒中断一次了。</li>
+</ol>
+<ul>
+<li>嘀嗒定时器在内核里面，是内核级的外设，一直在运行，用的是内核的计数器，所以一般选择嘀嗒定时器（sys tick）作为时基</li>
+<li>1兆指的是10的6次幂，同时1微秒是10的负6次幂</li>
+<li>原理是用内核的一个递减计数器，减到0，那么另一个重载寄存器就会重载并且加一来计数， <strong>uwtick</strong>就是嘀嗒定时器触发中断的次数</li>
+</ul>
+<h5 id="嘀嗒定时器的重要函数"><a href="#嘀嗒定时器的重要函数" class="headerlink" title="嘀嗒定时器的重要函数"></a>嘀嗒定时器的重要函数</h5><ul>
+<li>获取uwtick的值就直接设一个和uwTick一样类型的变量来储存就行了，直接F12 uwTick就能去找到它的定义的类型了</li>
+</ul>
+<h2 id="按键"><a href="#按键" class="headerlink" title="按键"></a>按键</h2><h4 id="步骤操作"><a href="#步骤操作" class="headerlink" title="步骤操作"></a>步骤操作</h4><ul>
+<li><p>配置好引脚后生成初始化代码，然后在MDK-ARM文件夹找到生成的keil5文件，把要用到的初始化代码粘贴到自己的项目里面</p>
+</li>
+<li><p>在我的项目的src文件夹里面的bsp中间层创建分模块的文件夹，并且在分模块文件夹里面创建对应的.c文件。把mx软件生成的初始化代码分模块装进来。同理要在inc文件夹中加入对应的.h文件</p>
+</li>
+<li><p>然后打开我的项目，在三个正方体的那个图标，把新建的代码文件添加进来，记住代码文件的名字要统一成bsp_key.c这种格式，并且要在.c文件里面引用对应的.h头文件。然后就是跟main.c文件交换头文件</p>
+</li>
+<li><p>把初始化文件填入我的项目里面就行了。记得在.c文件写好函数之后要在.h文件里面声明一下 ，并且把初始化函数丢进到main.c代码里面</p>
+</li>
+<li><p>然后就可以在.c文件里面写内容了</p>
+</li>
+</ul>
+<h5 id="按键扫描代码"><a href="#按键扫描代码" class="headerlink" title="按键扫描代码"></a>按键扫描代码</h5><p>&#x2F;&#x2F;在hal.gpio.h的代码的最底下找到常用的gpio相关的函数，比如HAL_GPIO_ReadPin</p>
+<p>unsigned char Key_Scan(void)<br>{<br>    unsigned char unKey_Val &#x3D; 0;<br>        if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0) &#x3D;&#x3D; GPIO_PIN_RESET)<br>        {<br>            unKey_Val &#x3D; 4;<br>        }</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span>(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_0) == GPIO_PIN_RESET)</span><br><span class="line">	&#123;</span><br><span class="line">		unKey_Val = <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_1) == GPIO_PIN_RESET)</span><br><span class="line">	&#123;</span><br><span class="line">		unKey_Val = <span class="number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_2) == GPIO_PIN_RESET)</span><br><span class="line">	&#123;</span><br><span class="line">		unKey_Val = <span class="number">3</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//键盘的运行函数一般都会用到状态机，一定要记得把函数的状态机												return</span></span><br><span class="line">	<span class="keyword">return</span> unKey_Val;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="按键功能代码"><a href="#按键功能代码" class="headerlink" title="按键功能代码"></a>按键功能代码</h5><p>void Key_Proc(void)</p>
+<p>{</p>
+<p>&#x2F;&#x2F;每100个嘀嗒定时器的中断扫描一次键盘	</p>
+<p>if ((uwTick - uwTick_Key &lt; 100)) return;   </p>
+<p>&#x2F;&#x2F;记得用来储存嘀嗒定时器的变量的类型是要自己去找的</p>
+<p>​	uwTick_Key &#x3D; uwTick;</p>
+<p>&#x2F;&#x2F;Down是下降沿，up是上升沿，val是表明按键是否按下，比如如果长按按键B4，那么val在这期间会一直等于4，但是Down只在按下那一瞬间是4，up只在松开那一瞬间是4	</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">unKey_Val = 	Key_Scan();</span><br><span class="line">unKey_Val_Dowm = unKey_Val &amp; (unKey_Val ^ unKey_Val_Old);</span><br><span class="line">unKey_Val_Up  = ~unKey_Val &amp; (unKey_Val ^ unKey_Val_Old);</span><br><span class="line">unKey_Val_Old = unKey_Val;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (unKey_Val_Dowm == <span class="number">4</span>)</span><br><span class="line">&#123;</span><br><span class="line">	LED_Disp(<span class="number">0x88</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (unKey_Val_Dowm == <span class="number">3</span>)</span><br><span class="line">&#123;</span><br><span class="line">	LED_Disp(<span class="number">0x00</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>}</p>
+<h2 id="LCD"><a href="#LCD" class="headerlink" title="LCD"></a>LCD</h2><h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><ul>
+<li><p>在芯片原理图里面能找到实物图和引脚图</p>
+</li>
+<li><p>LCD和LED都用到了PC口，是复用；LED是推挽，LCD是输入</p>
+</li>
+<li><p>考试的时候直接给了LCD的代码，直接在官方LCD例程代码里面的inc和src里面把对应的代码文件拿过来就行；文件是lcd.c和lcd.h、fonts.h</p>
+</li>
+<li><p>注意在工程里面添加好.c文件之后，要把它的include的路径修改一下，否则工程找不到.h文件。例如：<br>把</p>
+<p>#include “lcd.h”<br>#include “fonts.h”<br>改成</p>
+<p>#include “lcd\lcd.h”<br>#include “lcd\fonts.h”<br>记住是“\”</p>
+</li>
+<li><p>不能把#include “lcd\fonts.h”放到main.c里面，否则会报错说taget 没有创建</p>
+</li>
+</ul>
+<h5 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h5><p>就在lcd.h的最下面</p>
+<h5 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h5><p>​	界面的配置可以直接参考官方例程代码，直接复制粘贴用就行。<strong>但是要记住要加一个减速的proc函数</strong></p>
+<ul>
+<li>把清屏和设置背景色和字体颜色那几句代码放在Lcd的初始化函数后面，设置显示字符的代码放在proc功能函数里面</li>
+</ul>
+<p>	</p>
+<h5 id="显示字符串知识点"><a href="#显示字符串知识点" class="headerlink" title="显示字符串知识点"></a>显示字符串知识点</h5><ul>
+<li><p>sprintf函数</p>
+<p>&#x2F;&#x2F;这个函数的意思是把中间的“内容”全部整合成字符串并且命名为变量名<br>sprintf(变量名，“内容    %d”，i)</p>
+<p>然后用Lcd的显示函数把拼好的字符串显示出来就行了</p>
+</li>
+<li><p>一行最多显示20个字符</p>
+</li>
+<li><p>显示原理是ask码，如果要改的话要修改底层</p>
+</li>
+</ul>
+<h2 id="中断相关"><a href="#中断相关" class="headerlink" title="中断相关"></a>中断相关</h2><h5 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h5><ul>
+<li><p>具体原理：<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240228012103777.png" alt="image-20240228012103777"></p>
+<p>​	首先是配置好EXT0的基础设置，然后被触发；然后在边沿监测电路模块判断是上升沿还是下降沿，如果设置的是上升沿（下降沿），并且判断出来了的话，就会进入软件中断事件寄存器，然后进入中断屏蔽寄存器判断是否屏蔽；没有屏蔽的话就直接挂起请求寄存器来激发对应的中断服务函数。</p>
+</li>
+<li><p>NVIV是CM4内核的一个外设，叫做嵌套向量中断控制器，stm32的NVIC是阉割版的。</p>
+</li>
+<li><p>可以设置PA0、PA1为EZT0、EXT1中断，但是不能同时设置PA0、PB0为EXT0中断。</p>
+</li>
+</ul>
+<h5 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h5><ul>
+<li><p>M4内核的优先级设置由八个位来决定，从8个位里面分n个位来当抢占优先级，8-n个位来当响应优先级，但是stm32用的是阉割版，只用了4个位来分配优先级</p>
+</li>
+<li><p>中断抢占和响应的级别数字越小，优先度越高。而在32单片机设置的时候一共只有五种分组，第01234组对应抢占优先级分01234个位，先设置组，然后写响应优先级，根据抢占优先级和响应优先级的位数就行优先级分配，然后就是写中断服务函数。<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240226024454120.png" alt="image-20240226024454120"></p>
+</li>
+<li><p>只有抢占优先级大的时候才能打断，如果A中断已经运行了，B中断的抢占 &#x3D; A，同时B的响应优先于A，但是B不能打断A，而是A运行完之后再运行B；但是如果AB同时开始，那么由于B的响应优先于A，那么会先运行B。如果优先级完全一样就根据向量表来决定谁先</p>
+</li>
+<li><p>一共有23个外部中断EXTI，0-15对应所有寄存器的0-15，每个IO口都能作为外部中断的输入，而且可以设置触发模式（上升沿、下降沿、双边沿），而19-22EXTI都绑定了对应的事件</p>
+</li>
+</ul>
+<img src="D:/typora/软件本体/Typora/resources/截图/image-20231105211407636.png" alt="image-20231105211407636" style="zoom:150%;" />
+
+<h5 id="中断服务函数"><a href="#中断服务函数" class="headerlink" title="中断服务函数"></a>中断服务函数</h5><ul>
+<li>默认的中断服务函数在xx.s文件里面，要定义新的一般在it.c文件里面定义</li>
+</ul>
+<h5 id="常用函数-1"><a href="#常用函数-1" class="headerlink" title="常用函数"></a>常用函数</h5><ul>
+<li>设置分组函数，直接在main.c的HAL_Init函数里面找到设置中断优先级分组的函数就行了，然后往里面找出这个函数的根源就能找到下面那几个<br>HAL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4)</li>
+<li>配置中断的具体优先级函数，在HAL_Init函数里面对滴答定时器的设置里面可以找到<br>HAL_NVIC_SetPriority(中断名, 抢占优先级, 响应优先级);</li>
+<li>使能中断函数，顺着上面找到的找出来就行<br>void HAL_NVIC_EnableIRQ(IRQn_Type IRQn)</li>
+<li>在it.c里面写中断服务函数，名字去xx.s里面找。</li>
+</ul>
+<h5 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h5><p><img src="D:/typora/软件本体/Typora/resources/截图/image-20240228114144365.png" alt="image-20240228114144365"></p>
+<ol>
+<li>先在MX软件里面把要用的GPIO口修改为EXTI的复用模式</li>
+<li>在MX软件的GPIO界面，把GPIO口选择触发模式（上升沿触发，下降沿触发等等）</li>
+<li>在GPIO主选项卡里面找到NVIC子选项卡，进行使能</li>
+<li>找到NVIC主选项卡，记得先分组，然后再分配优先级</li>
+<li>同时记得把嘀嗒定时器的优先级调高 </li>
+<li>生成代码之后记得检查一下嘀嗒定时器和GPIO的中断分组和优先级有没有问题；；嘀嗒定时器的中断分组在HAL_Init里面，下面的HAL_InitTick就是优先级分组；；；GPIO中断的中断分组在msp.c里面，优先级函数，如果转移了就在exti.c，如果没转移就在Gpio.c。</li>
+<li>然后写好回调函数，一般写在exti.c里面</li>
+<li>把初始化函数写在main.c里面</li>
+</ol>
+<h5 id="常用代码技巧"><a href="#常用代码技巧" class="headerlink" title="常用代码技巧"></a>常用代码技巧</h5><ul>
+<li><p>异或翻滚</p>
+<p>ucled ^&#x3D; 0x88;<br>LED_Disp(ucled);<br>这样就能达到按一下第4、8个灯亮，再按一下4、8灯灭的效果。</p>
+</li>
+</ul>
+<h5 id=""><a href="#" class="headerlink" title=""></a></h5><h2 id="比赛流程"><a href="#比赛流程" class="headerlink" title="比赛流程"></a>比赛流程</h2><p>1、先把RCC配HSE，然后到时钟24-3-20配成输出80Hz，选PLLCLK；改一下Projectname，配置Base基础层；选MDK-ARM,配置成v5；把Code Generator的第一项勾上；打底的基础代码就弄好了。</p>
+<p>2、把基础代码复制到另一个文件夹，然后把要用的东西都配置好，然后再从这个里面复制基础代码到要提交的工程里面。</p>
+<p>3、在src顶层代码里面，加bsp中层代码文件夹，并且把bsp文件夹复制到inc头文件里面。并且加入.c文件和.h文件</p>
+<p>4、然后把本来的gpio.c删掉，加载进新的gpio.c，并且在魔法棒里面加上.h文件的bsp文件夹。记得把main函数里面的gpio初始化函数注释了。</p>
+<p>5、在main.c里面把Gpio.h改成新的h文件，并且在新.h文件里面要引用main.h文件才能用hal库，然后到main.c文件里面运行新的初始化函数。</p>
+<p>6、运行代码之前记得换模拟器，并且点上复位运行选项。</p>
+<h5 id="LED代码"><a href="#LED代码" class="headerlink" title="LED代码"></a>LED代码</h5><p>注意写点亮LED的代码的时候要左移8位，因为LED是从PC8开始一直到PC15；</p>
+<h5 id="滴答定时器"><a href="#滴答定时器" class="headerlink" title="滴答定时器"></a>滴答定时器</h5><p>原理是倒计时，倒计时满了之后就产生中断；由于滴答定时器使用的是内核的晶振，所以在MX里面对应的那个内核的频率就是滴答定时器的频率。</p>
+<p>中断周期的计算方法：倒计时的最大数值  &#x2F;  滴答定时器的频率</p>
+<p>uwTick就是内部的时间储存值，它的1就是1毫秒。而且可以直接在main函数当成一个变量来引用。这个值最多保存49天的时间。</p>
+<h2 id="串口"><a href="#串口" class="headerlink" title="串口"></a>串口</h2><h5 id="小知识-1"><a href="#小知识-1" class="headerlink" title="小知识"></a>小知识</h5><ul>
+<li>usart是同步，uart是异步<br>巧记s是same，有s是同步，没s是异步，一般是同步用得多</li>
+<li>一共就4个串口</li>
+<li>数据手册的4.11有引脚复用的图，一般用PA9和PA10来实现串口</li>
+<li>串口中涉及的中断<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240302212705767.png" alt="image-20240302212705767"></li>
+</ul>
+<h5 id="位或位与运算符号"><a href="#位或位与运算符号" class="headerlink" title="位或位与运算符号"></a>位或位与运算符号</h5><ul>
+<li>​	&amp;（按位与）双目运算，功能是参与运算的两个数各对应的二进制位相与，只有对<strong>应的两个二进制位均为1时，结果为1，否则为0</strong>；<br>​	 |（按位或）双目运算，功能是参与运算的两个数各对应的二进制位相或，<strong>只有对应的两个二进制位有一个为1时，结果就为1</strong></li>
+</ul>
+<h5 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h5><p><img src="D:/typora/软件本体/Typora/resources/截图/image-20240229144555994.png" alt="image-20240229144555994"></p>
+<ul>
+<li>粗略理解：芯片通过APB总线发送数据到TDR寄存器，然后通过IFO进行排版，把数据弄成串行的形式，然后发送出去；；接收也是一样的原理。</li>
+</ul>
+<p><img src="D:/typora/软件本体/Typora/resources/截图/image-20240229154213188.png" alt="image-20240229154213188"></p>
+<ul>
+<li>具体理解<br>具体的寄存器的功能说明在微控制器参考手册的37.8（USART的registers）</li>
+</ul>
+<ol>
+<li>先对CR1寄存器的UE位写入1，让串口使能。</li>
+<li>对CR1的M位，定义字长，在37.8里面能找到对应的资料，00表示1位启动位，8位数据位，n位停止位；01表示1位启动位，9位数据位，n位停止位；10表示1位启动位，7位数据位，n位停止位；一般用00；</li>
+<li>CR2的STOP位决定停止位的字长，00是1位停止位；01是0.5位停止位；10是2位停止位；11是1.5位停止位。最常用00</li>
+<li>对DMA进行配置（太高级了用不着，跳过）</li>
+<li>对BRR（控制波特率）进行配置，</li>
+<li>把CR1的TE配置成1，发送一个空闲帧作为第一次数据发送</li>
+<li>之后DR寄存器就会发送数据，如果TXE &#x3D; 1,说明DR没东西了，发干净了，如果TXE &#x3D; 0，说明没发干净。TC &#x3D; 1，说明传送完成</li>
+</ol>
+<ul>
+<li>接收过程和发送过程差不多一样，接收过程的CR1中的RE位 &#x3D; 发送过程中的TE位</li>
+<li>如果RXNE &#x3D; 1, 说明RDR寄存器里面有数据，说明外面发送数据到单片机里面了。</li>
+<li>RXNEIE &#x3D; 1，接收中断开启</li>
+<li>然后软件读取DR寄存器的数据，读取完之后RXNEIE自动清零。</li>
+<li>一般默认16倍接收采样</li>
+</ul>
+<h5 id="实现蓝桥杯嵌入式的串口发送"><a href="#实现蓝桥杯嵌入式的串口发送" class="headerlink" title="实现蓝桥杯嵌入式的串口发送"></a>实现蓝桥杯嵌入式的串口发送</h5><ol>
+<li><p>打开MX，先找到USART1，选择异步使能，这个时候默认的是PC5</p>
+</li>
+<li><p>选用PA9、PA10复用成AF7，功能分别为USART1的TX、RX。引脚复用相关手册在数据手册的4.11</p>
+</li>
+<li><p>要调波特率的，数据字长，中断位的话可以调一调</p>
+</li>
+<li><p>把USART1的子选项的NVIC的中断使能开了</p>
+</li>
+<li><p>去GPIO的USART子选项配置PA9、PA10，选择开漏输出就行。</p>
+</li>
+<li><p>去NVIC配置分组和优先级</p>
+</li>
+<li><p>移植usart.c文件，以及it.c的中断函数</p>
+</li>
+<li><p>如果usart.c出现大量报错<br>去Driver里面把核的usart和uart的代码加进来<br>如果还是报错，就一路朔源进去把对应的宏定义的注释取消了<br>如果还报错说明可能是忘记加main.h的头文件了</p>
+</li>
+<li><p>如果在移植中断的时候（在it.c文件），huart1这个变量报错，是因为没有定义，这个时候要朔源到这个变量的定义，如果是在别的文件要在它前面加“extern”，比如：extern UART_HandleTypeDef huart1;</p>
+</li>
+<li><p>编写串口Proc函数<br>首先是利用嘀嗒定时器来控制函数的速率</p>
+</li>
+<li><p>然后就是发送或者接收数据，那么重点是怎么找到发送函数和接收函数<br>首先是必须要把usart.c和uart.c的核文件加进来，否则有可能找不到函数；；如果还是找不到函数的话，就一路朔源把对应的宏定义打开</p>
+<p>然后利用自动补全，打出HAL_USART_Transmit<br>然后朔源看怎么填，如下：<br>HAL_StatusTypeDef HAL_USART_Transmit(USART_HandleTypeDef *husart, uint8_t *pTxData, uint16_t Size, uint32_t Timeout)</p>
+<p>HAL_StatusTypeDef HAL_UART_Transmit(USART_HandleTypeDef *husart, uint8_t *pTxData, uint16_t Size, uint32_t Timeout)</p>
+<p>一共有两个函数，对应异步同步，那么究竟那里看是异步还是同步，直接看生成的初始化函数里面写的是uart还是usart就行。</p>
+<p>注意上面的USART_HandleTypeDef是一个句柄，直接在我们的usart.c文件的开头就会定义这个句柄。</p>
+</li>
+<li><p>串口软件，记得先配置串口参数</p>
+</li>
+<li><p>如果串口还是失灵，看一看初始化函数到底有没有弄进main函数<br>注意只需要在main函数里面引用第一个初始化函数了，因为别的那两个初始化函数都在第一个初始化函数里面被引用了</p>
+</li>
+</ol>
+<h5 id="实现串口接收数据"><a href="#实现串口接收数据" class="headerlink" title="实现串口接收数据"></a>实现串口接收数据</h5><p>​		究极大坑：如果在回调函数里面用了Delay函数的话，必须要把嘀嗒定时器的优先级调到最高，串口中断的优先级调低与嘀嗒定时器，否则会出现死循环。；；		要改嘀嗒定时器的优先级，只能一路朔源过去改宏定义</p>
+<p>​		基本原理：通过中断来接收数据，所以要编辑回调函数<br>​		涉及函数：HAL_StatusTypeDef HAL_UART_Receive_IT(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size)<br>​		uint16_t Size表示接收数据的大小<br>​	而且这个函数当成初始化函数就行了，不用放进while里面一直运行</p>
+<p>​	HAL_UART_Receive_IT(&amp;huart1, &amp;rx, 1);<br>​		大概逻辑就是接收数据到“rx”里面</p>
+<ul>
+<li>先在main里面写好Receive函数</li>
+<li>写好回调，注意的是回调里面还要写一次一样的Receive函数</li>
+</ul>
+<h5 id="奇偶校验的原理"><a href="#奇偶校验的原理" class="headerlink" title="奇偶校验的原理"></a>奇偶校验的原理</h5><p><img src="D:/typora/软件本体/Typora/resources/截图/25b13c997e06f169db2ddbe71ac33fe.png" alt="25b13c997e06f169db2ddbe71ac33fe"></p>
+<h2 id="I方C"><a href="#I方C" class="headerlink" title="I方C"></a>I方C</h2><h5 id="基础知识-1"><a href="#基础知识-1" class="headerlink" title="基础知识"></a>基础知识</h5><ul>
+<li><p>I2C是由数据线SDA，时钟线SCL构成的串行总线，可以实现在CPU和IC、IC和IC之间的双向传送数据；注意两条线必须接上拉电阻，而且数据传输只能在总线不忙的时候进行。</p>
+</li>
+<li><p>开始和结束的基本原理：</p>
+<p><img src="D:/typora/软件本体/Typora/resources/截图/image-20240304204900645.png" alt="image-20240304204900645"></p>
+</li>
+<li><p>SCL是时间线、SDA是数据线。所以SCL只能输出不能输入；SDA能输出和输入</p>
+</li>
+<li><p>发送数据流程</p>
+<p><img src="D:/typora/软件本体/Typora/resources/截图/image-20240306172932124.png" alt="image-20240306172932124"></p>
+<p>先start，然后写器件地址（写入就是0xa0、读就是0xa1），等待回应；然后写入数据地址，等待回应；写入数据，等待回应；停止。</p>
+</li>
+<li><p>读数据流程<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240306173505386.png" alt="image-20240306173505386"></p>
+<p>注意读数据的时候，是要先以写入格式访问器件地址，然后进入到数据地址，然后才能再重新用读的格式访问器件地址，才能开始读；而且注意，访问器件地址必须要前置一个start</p>
+<p>步骤：先start，然后以写入的格式访问器件地址，等待回应；写入数据地址，等待回应；start，以读的格式访问器件地址（0xa1），等待回应；读数据，发送回应，如果读完了要拒绝发送回应；停止。</p>
+<p>注意的是，读流程的后半段是发送应答信号</p>
+</li>
+<li><p>如何区分等待应答信号和发送应答信号的用法</p>
+<p>总线上发送一个信号给从设备之后，要等待从设备成功就收并且等待下一步指令的反馈信号。<br>但是读数据的原理是，把24C02上的数据搬到一个变量里面，变量接收完之后要向总线发送信号。</p>
+</li>
+</ul>
+<h5 id="常用函数-2"><a href="#常用函数-2" class="headerlink" title="常用函数"></a>常用函数</h5><ul>
+<li>I2C的开始信号、结束信号函数等等常用函数在考试送的参考代码有</li>
+<li>0101 + 0101 &#x3D; 0100 ，相当于左移一位，所以记住自己+自己 &#x3D; 左移一位</li>
+</ul>
+<h5 id="操作步骤-1"><a href="#操作步骤-1" class="headerlink" title="操作步骤"></a>操作步骤</h5><ul>
+<li><p>直接把官方给的参考例程代码拿过来用</p>
+</li>
+<li><p>I2CWaitAck函数，要把 SDA_Output_Mode();放在 SCL_Output(0);delay1(DELAY_TIME);后面</p>
+</li>
+<li><p>写24C02的代码（考试的时候要背下来）<br>基本逻辑在基础知识里面</p>
+</li>
+<li><p>写</p>
+<p>void i2c_24c02_write(unsigned char *pucBuf,unsigned char unAddr,unsigned char unNum)<br>{<br>I2CStart();<br>&#x2F;&#x2F;0xa0是器件地址？<br>I2CSendByte(0xa0);<br>I2CWaitAck();<br><br>&#x2F;&#x2F;发送地址<br>I2CSendByte(unAddr);<br>    I2CWaitAck();<br>    while(unNum–)<br>    {<br>        &#x2F;&#x2F;++表示把指针指向下一个位置<br>    I2CSendByte(*pucBuf++);<br>        I2CWaitAck();<br>    }<br><br>    I2CStop();<br>    delay1(500);<br>}</p>
+</li>
+<li><p>读，注意读和写的区别</p>
+<p>void i2c_24c02_read(unsigned char *pucBuf,unsigned char unAddr,unsigned char unNum)<br>{<br>I2CStart();<br>I2CSendByte(0xa0);<br>I2CWaitAck();<br><br>&#x2F;&#x2F;发送地址<br>I2CSendByte(unAddr);<br>    I2CWaitAck();<br><br>I2CStart();<br>I2CSendByte(0xa1);<br>I2CWaitAck();<br><br>    while(unNum–)<br>    {<br>        &#x2F;&#x2F;++表示把指针指向下一个位置,一定要记得++<br>        *pucBuf++ &#x3D; I2CReceiveByte();<br>        if(unNum)<br>            I2CSendAck();<br>        else<br>            I2CSendNotAck();<br>    }<br><br>    I2CStop();<br>}</p>
+</li>
+<li><p>写好函数之后记得在.h文件声明，然后记得在main函数添加上初始化函数。</p>
+</li>
+</ul>
+<h2 id="可编程电阻MCP4017"><a href="#可编程电阻MCP4017" class="headerlink" title="可编程电阻MCP4017"></a>可编程电阻MCP4017</h2><h5 id="基础知识-2"><a href="#基础知识-2" class="headerlink" title="基础知识"></a>基础知识</h5><ul>
+<li>最多100k</li>
+<li>注意VDD是3.3V</li>
+<li>注意有一个10K的电阻和可编程电阻来分压<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240307200521158.png" alt="image-20240307200521158"></li>
+<li>基本原理是，N可以取0-127，数字越大串的电阻越大<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240307003955660.png" alt="image-20240307003955660"></li>
+<li>而且要注意的是，电脑里面的N是用十六进制来表示的，如果想写入100，要把100转化成十六进制再写进去 </li>
+<li>器件地址：末位是0表示写入，末位是1表示读<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240307004815237.png" alt="image-20240307004815237"></li>
+<li>%f显示浮点数；%0.2f，表示保留两位小数；%4.2f表示保留两位小数，而且最小宽度为4个字符宽（带上小数点）；<br>例如：<br>(“%4.2f”, 1.2 ); &#x2F;&#x2F;输出结果 1.20<br>(“%4.2f”, 12.195 ); &#x2F;&#x2F;输出结果 12.20</li>
+</ul>
+<h5 id="编程思路"><a href="#编程思路" class="headerlink" title="编程思路"></a>编程思路</h5><ul>
+<li><p>C语言基础，一个函数的前缀如果是void表示不返回值；如果括号里面有void表示没有参数值；如果前缀是变量类型，那么要有return。</p>
+</li>
+<li><p>写入：先开始，然后以写入的格式访问器件地址（0x5e），等待回应；写入电阻值，等待回应；停止</p>
+</li>
+<li><p>读：定义一个变量，先开始，然后以读的格式访问器件地址（0x5f）（这一点倒是和24C02不一样），等待回应；把数据读到变量，发送not信号，停止；记得return变量。但是这里return回来的值只是电阻的数量</p>
+<p>注意真实的电阻值 &#x3D; 0.7874*return回来的变量（因为100k分成了127份）</p>
+<p>记住运算单位是KΩ</p>
+</li>
+<li><p>注意板子是16进制，如果输入100，要把100转化成16进制再写入。</p>
+</li>
+</ul>
+<h2 id="ADC"><a href="#ADC" class="headerlink" title="ADC"></a>ADC</h2><h5 id="基本原理-1"><a href="#基本原理-1" class="headerlink" title="基本原理"></a>基本原理</h5><ul>
+<li>基础知识：G431内部有两个最高12位的ADC，可选精度为6、8、10、12位，如果选了12位，就是把3.3V分成了2的12次方份。</li>
+<li>一个ADC可以同时处理19个输入，包括16个IO引脚，3个内部通道。</li>
+<li>同时采样时间和扫描方向都能配置，扫描方向就是19个输入的处理顺序。</li>
+<li>由于最高12位，但是数据是存在两个比特（16位）里面，所以有4位是空的，可以配置对齐方式（左对齐、右对齐）</li>
+<li>可以设置上下限的看门狗</li>
+<li>转换结束、注入转换结束、发生看门狗的时候都会产生中断</li>
+</ul>
+<h5 id="找ADC输入端口对应的GPIO口"><a href="#找ADC输入端口对应的GPIO口" class="headerlink" title="找ADC输入端口对应的GPIO口"></a>找ADC输入端口对应的GPIO口</h5><ul>
+<li>每个输入端口对应的GPIO口（参考手册搜IN1就能找到了）</li>
+<li><img src="D:/typora/软件本体/Typora/resources/截图/image-20240312232923289.png" alt="image-20240312232923289"></li>
+</ul>
+<p>一般用PB12(ADC1的IN11)、PB15（ADC2的IN15）</p>
+<h5 id="注入通道和规则通道"><a href="#注入通道和规则通道" class="headerlink" title="注入通道和规则通道"></a>注入通道和规则通道</h5><ul>
+<li><p>当信号从GPIO口输入之后，需要对其进行转换顺序的编排；这两个通道实质上就是用来给输入信号的转换顺序排序，以及确定要转换多少个通道的。<br><img src="D:/typora/软件本体/Typora/resources/截图/image-20240313102311165.png" alt="image-20240313102311165"></p>
+</li>
+<li><p>注入通道比规则通道厉害，哪怕规则通道的排序排到一半了，如果这时候来了个注入通道排序，甚至都会优先把注入通道弄完了才回去继续规则通道。</p>
+</li>
+<li><p>注入通道寄存器有四个，相当于一个缓存器，就像是外卖柜子一样，把数据存起来，等CPU一个一个读取；而规则数据寄存器只有一个通道，必须等CPU把数据读取走了，后面的数据才能注入，效率很低。</p>
+</li>
+</ul>
+<h5 id="采样时间与转换时间"><a href="#采样时间与转换时间" class="headerlink" title="采样时间与转换时间"></a>采样时间与转换时间</h5><ul>
+<li>采样时间实际上是对一个微小电容的充电过程，时间不能太短，最小是3个周期，转换要12个周期，一个完整的采样+转换要15个周期。</li>
+<li>例如ADCCLK是30MHz，完成一次就是15 &#x2F; 30M，就是0.5us，注意ADCCLK来源可以内部也可以外部</li>
+</ul>
+<h5 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h5><ul>
+<li><p>MX配置，把PB12配成ADC模式，然后去ADC1主选项卡里面，把IN11设置成单端模式。然后进行基本配置，时钟选异步时钟二分频；精度12位；右对齐；EOC设置单次转换；超限数据，选择保存；然后进行规则通道配置，首先使能；设置转换通道个数；规则通道触发方式选择软件；然后配置Rank，采样时间选择最长。时钟选择异步sysclk</p>
+</li>
+<li><p>生成代码后移植，记得把初始化函数的名字改了，如果有报错，就回去看看MX代码的Driver库代码加了什么，然后在自己代码加上(一共有3个库文件)。如果还是报错，就从main.h一路朔源，把宏定义解开。</p>
+</li>
+<li><p>由于ADC的时钟源有好几个，所以必须要另外在时钟初始化函数里面加东西，<strong>记住别忘记了把main.c里面关于时钟的代码移植进去。</strong></p>
+</li>
+<li><p><strong>然后到写函数，但是记得写函数之前一定要把初始化函数丢到main里面先，</strong></p>
+<p><strong>写函数getADC1();写完函数一定要记得把函数名丢到.h里面。</strong></p>
+</li>
+<li><p>uint16_t Get_ADC1(void)<br>如果自动填充提示不出来函数，那就添加好3个库文件之后记得全局编译一下。</p>
+<p>思路是：先start，然后get，然后return<br>{</p>
+<pre><code>uint16_t data;
+</code></pre>
+<p>HAL_ADC_Start(&amp;hadc1);<br>data &#x3D; HAL_ADC_GetValue(&amp;hadc1);<br>return data;<br>}</p>
+</li>
+<li><p>然后就可以直接在lcd里面输出读取到的数值了，注意如果出现除法运算，一定要记得，“&#x2F;”是取整的意思，如果数值很小，结果就会变成0导致错误，这个时候一般都得把除数强制转换成浮点数才行。<br>sprintf(Lcd_Disp_String,”%.2f”, (float)Get_ADC1()&#x2F;4096*3.3);</p>
+<p>记住如果lcd的显示有问题，试试重新编译完再下载</p>
+</li>
+</ul>
+<h2 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h2><h5 id="记忆不同类型定时器对应的序号"><a href="#记忆不同类型定时器对应的序号" class="headerlink" title="记忆不同类型定时器对应的序号"></a>记忆不同类型定时器对应的序号</h5><p>​			尤其是67基础型和18高级型</p>
+<p><img src="D:/typora/软件本体/Typora/resources/截图/75422d11ee064f808221df2ee16086e.png" alt="75422d11ee064f808221df2ee16086e"></p>
+<h1 id="全真模拟"><a href="#全真模拟" class="headerlink" title="全真模拟"></a>全真模拟</h1><h3 id="创建源文件"><a href="#创建源文件" class="headerlink" title="创建源文件"></a>创建源文件</h3><ul>
+<li>芯片信号		G431RBT6（如果不记得了就去产品手册里面找）</li>
+</ul>
+<h4 id="MX源文件配置"><a href="#MX源文件配置" class="headerlink" title="MX源文件配置"></a>MX源文件配置</h4><ul>
+<li><p>时钟源		（默认）systick嘀嗒定时器</p>
+</li>
+<li><p>NVIC           （默认）设置成4号分组</p>
+</li>
+<li><p>RCC               高速时钟设置成晶振（第三个）</p>
+</li>
+<li><p>配置时钟    HSE外部时钟源是24M，要把HCLK配成80M</p>
+</li>
+<li><p>名字地址<br>程序结构选基础</p>
+<p>编译器选MDK-ARM   V5</p>
+</li>
+</ul>
+<h4 id="工程文件配置"><a href="#工程文件配置" class="headerlink" title="工程文件配置"></a>工程文件配置</h4><ul>
+<li>生成代码后    会产生报错，是因为缺了xx.s文件，去考试会给的实例代码找到复制进来，并且添加文件就行。</li>
+<li>点魔术棒，link选DAPlink，直到监测到板子能够下载成功为止。</li>
+<li>把冗余的注释删了（注意一边删一边编译，防止出错），并且把中间层弄好，但是一定要注意，如果要引用.h文件，必须点击魔术般→C&#x2F;C++→添加中间层文件夹，才能访问到这个文件夹。</li>
+</ul>
+<h3 id="RCC配置"><a href="#RCC配置" class="headerlink" title="RCC配置"></a>RCC配置</h3><ol>
+<li>自己看着办就行，把简单的函数合并一下，把RCC的初始化函数放到RCC中间层就行</li>
+</ol>
+<h3 id="键盘配置"><a href="#键盘配置" class="headerlink" title="键盘配置"></a>键盘配置</h3><ol>
+<li>科普输入输出模式<ol>
+<li><strong>所以键盘是配置成输入模式</strong></li>
+<li>模式都是以单片机为主体，输入就是外设输入到单片机，输出就是单片机输出到外设。</li>
+<li>输入模式：当GPIO口设置为输入模式时，它可以接收外部信号或者状态，并将其传递给单片机进行处理。输入模式下，GPIO口通常连接到外部设备（如按键、传感器等），用于接收来自外部的信号。</li>
+<li>输出模式：当GPIO口设置为输出模式时，它可以向外部设备发送信号或者状态。输出模式下，GPIO口通常连接到其他电路或设备，用于向其发送控制信号或数据。</li>
+</ol>
+</li>
+<li>按键GPIO口的基本配置<ol>
+<li><strong>什么配置也不用，但是记得设置把外设的配置代码另显示project manager→code generator→generate peripheral</strong></li>
+</ol>
+</li>
+<li>功能函数编写<ol>
+<li>**一定要unsigned char value_key &#x3D; 0;**，否则会出bug</li>
+</ol>
+</li>
+</ol>
+<h3 id="LED配置"><a href="#LED配置" class="headerlink" title="LED配置"></a>LED配置</h3><ol>
+<li>科普推挽输出和开漏输出<ol>
+<li>推挽输出可以直接配置高低电平</li>
+<li>开漏输出只能配置低电平</li>
+<li>总的来说，推挽输出可以提供高低电平输出，适合直接驱动负载；而开漏输出只能提供低电平输出，适合与其他器件共享信号线。</li>
+</ol>
+</li>
+<li>基本配置以及移植初始化函数<ol>
+<li><strong>记得别漏了PD2，推挽输出，而且把初始状态选择高电平（暗）</strong></li>
+<li><strong>但是PD2是高电平有效，所以默认要低电平</strong></li>
+<li>然后就是移植初始化函数，<strong>一定要记得把初始化函数丢进main里面，以及头函数的引用处理好</strong></li>
+<li><strong>一定一定要记得在初始化函数里面添加把所有灯熄灭的代码！</strong></li>
+</ol>
+</li>
+<li>功能函数编写<ol>
+<li>原理<ol>
+<li>先把GPIO口的数值调配好，然后把PD2打开再关闭，就是把数值输出了</li>
+<li>先把所有的灯熄灭，然后ucled&lt;&lt;8，就是输入哪个点亮哪个灯了</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="lcd配置"><a href="#lcd配置" class="headerlink" title="lcd配置"></a>lcd配置</h3><ol>
+<li>代码直接从参考代码拿</li>
+<li><strong>记住千万不能在main.c里添加#include “lcd\fonts.h”</strong></li>
+<li>*<em>u8 <em>类型就是限定了容量的char数组</em></em><br>unsigned char value_lcd[22];</li>
+</ol>
+<h3 id="adc配置"><a href="#adc配置" class="headerlink" title="adc配置"></a>adc配置</h3><ol>
+<li><p>别漏了Analog选项</p>
+</li>
+<li><p>把分频改成异步2分频，需要把rank的时间改到最大</p>
+</li>
+<li><p>如果大量报错，就回去mx生成的代码，看看driver里面添加了什么文件（一共3个），并且朔源看看宏定义要解什么</p>
+</li>
+<li><p>写函数</p>
+<ol>
+<li><p>get_adc1</p>
+</li>
+<li><p>思路是：先start，然后get，然后return，类型是ui_16</p>
+<ol>
+<li><strong>注意get到数值之后要赋予一个变量才能return</strong></li>
+</ol>
+</li>
+<li><p>数据转化：get到的数值是把3.3V分成4096份，</p>
+<ol>
+<li>注意数值比较小的时候的除法，实质上是取整，如果不强制转换float容易出事</li>
+</ol>
+</li>
+<li><p>如果adc读不了数据，那就是时钟没配</p>
+<ol>
+<li><p>首先到MX里面选择PLLP</p>
+</li>
+<li><p>在MX代码的main.c里面把那段代码丢到我的RCC.c里面</p>
+<ol>
+<li><pre><code class="c">PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC12;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">```c</span><br><span class="line">  PeriphClkInit.Adc12ClockSelection = RCC_ADC12CLKSOURCE_PLL;</span><br><span class="line">  if (HAL_RCCEx_PeriphCLKConfig(&amp;PeriphClkInit) != HAL_OK)</span><br><span class="line">  &#123;</span><br><span class="line">    Error_Handler();</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>注意如果报错，那就是头上漏了</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RCC_OscInitTypeDef RCC_OscInitStruct = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">RCC_ClkInitTypeDef RCC_ClkInitStruct = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">RCC_PeriphCLKInitTypeDef PeriphClkInit = &#123;<span class="number">0</span>&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>引用都放在.h文件里面，不然会找不到函数</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="i2c配置"><a href="#i2c配置" class="headerlink" title="i2c配置"></a>i2c配置</h3><p><strong>该死的东西，把read函数打成write函数，debug都de疯了</strong></p>
+<ol>
+<li><p>代码从参考例程拿，注意<strong>只拿hal的代码</strong></p>
+</li>
+<li><p>24c02</p>
+<ol>
+<li><p>默写函数</p>
+<ol>
+<li><p>读函数</p>
+<ol>
+<li><p>首先明确函数抬头：<strong>把储存的值读出来</strong>，创建一个变量（一般是确定长度的字符串），然后确定读地址的起点和读数据的长度，把数据读进这个变量</p>
+<p>写函数抬头：<strong>把值写进储存空间</strong>，把一个变量的值写进写地址里面</p>
+</li>
+<li><p>然后明确基础</p>
+<ol>
+<li>首先是每读取一次器件地址，都要start一次</li>
+<li>以及发送数据都要waitack</li>
+<li>接受数据都要sendack，接受最后一次数据要sendnotack</li>
+</ol>
+</li>
+<li><p>然后明确思路</p>
+<ol>
+<li>读：先进入写器件地址<strong>0xa0</strong>，然后进入写地址，然后再进入读器件地址<strong>0xa1</strong>，然后用<strong>while和if的嵌套</strong></li>
+<li>写：进入写器件地址，进入写地址，写入数据，只用<strong>while</strong></li>
+</ol>
+</li>
+<li><p>注意事项</p>
+<ol>
+<li><p>先写write再写read重复利用的代码更多</p>
+</li>
+<li><p><strong>函数抬头所有类型都是insigned char</strong></p>
+</li>
+<li><p>注意函数抬头的变量前面<strong>必须要加“*”，用作指针</strong>，才能进行进位赋值</p>
+</li>
+<li><p><strong>用while里面嵌套if来实现进位读，写只有while</strong></p>
+</li>
+<li><p><strong>注意建立变量的时候，不能数字起手</strong></p>
+</li>
+<li><p><strong>extern的用法</strong></p>
+<ol>
+<li>在main.c里面定义了数组，在lcd.c要用，就要在lcd.c用extern声明一次</li>
+</ol>
+</li>
+<li><p>初始化配置的等待回应的函数要改成</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SCL_Output(<span class="number">0</span>);</span><br><span class="line">    delay1(DELAY_TIME);</span><br><span class="line">		SDA_Output_Mode();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果写入和读取连着的话要加延时</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">i2c_24c02_write(value_24c02_01,<span class="number">0</span>,<span class="number">5</span>);</span><br><span class="line">HAL_Delay(<span class="number">100</span>);</span><br><span class="line">i2c_24c02_read(value_24c02_02,<span class="number">0</span>,<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>0x11，的%x显示才是11</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>msp可编程电阻</p>
+<ol>
+<li>读函数<ol>
+<li>函数抬头：要明确的是msp的读函数不同于24c02，<strong>是有返回值的，是ui_8，而且没有输入变量</strong>，而且对于这种函数，<strong>一定要记得return</strong></li>
+<li>函数思路：先访问器件地址<strong>0x5f</strong>，然后读数据retrun就行，但是由于只读一次，所以用<strong>sendnotack</strong></li>
+</ol>
+</li>
+<li>写函数<ol>
+<li>思路：访问器件地址<strong>0x5e</strong>，然后发送数据就行。</li>
+</ol>
+</li>
+<li>注意事项<ol>
+<li>首先是写函数的输入变量，如果说我要写入100，那么必须先把100<strong>变成16进制再输入</strong></li>
+<li>数值转换<ol>
+<li>首先是直接read到的数值，就是我分配了多少个电阻（最多127个）</li>
+<li>0.787 * read值 &#x3D; 阻值KΩ（最多100k）</li>
+<li>3.3 * （阻值 &#x2F; 阻值+10） &#x3D; 电压</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="uart"><a href="#uart" class="headerlink" title="uart"></a>uart</h3><ol>
+<li><p><strong>基础知识</strong><br>usart能配成同步的也能配成异步的<br>uart只能是异步的<br>产品手册拓展接口的那几个端口都能用，只要TIM的通道别重复就行</p>
+</li>
+<li><p><strong>基础配置</strong><br>搜索usart1，选择异步，并且波特率改9600<br>打开串口的NVIC使能<br>回去NVIC主选卡，配优先级</p>
+</li>
+<li><p><strong>程序移植</strong></p>
+<ol>
+<li>串口这边<strong>时钟树的配置多了一段</strong>，记得别漏了，如果报错就在函数的前面几行那里把定义的几个变量也粘过来</li>
+<li>.h只声明主要的那个初始化函数就行</li>
+</ol>
+</li>
+<li><p><strong>写程序</strong></p>
+<ol>
+<li><p>技巧</p>
+<p>uart.c声明的句柄，在.h文件extetn，别的文件就能直接用了<br>注意回调函数里面的东西越简单越好，不然如果一次性发四个数，会来不及处理（或者有一个别的方法，把一次性接收的字节数改为4，但是这样要把接收数据的变量类型改为uint32，这样就可以一次性发四个数）</p>
+</li>
+<li><p>发送<br>直接用HAL_UART_Truansmit就行了，不用IT，要记得strlen这个函数<br>发送字符就字符显示，发送数字就数字显示</p>
+</li>
+<li><p>接收</p>
+<p>要在初始化区域，打开中断串口（用HAL_UART_RECEIVE_IT）<br>写回调函数，如果不能自动填充，就去HAL库的uart.h文件里面找，记得要找完成接收才运行的回调函数，记住回调函数里面，<strong>最后要加上在此把函数中断打开的那句代码</strong>，直接把函数头复制过来就好<br>发送数据要16进制发送</p>
+</li>
+</ol>
+</li>
+<li><p><strong>注意事项</strong></p>
+<ol>
+<li>变量空间全部要用定义了大小的数组</li>
+<li><strong>带IT和不带IT的发送、接收函数的区别</strong><br>带IT的是直接定义发送内容然后发送（）<br>不带IT的可以直接发送一个不定量大小的变量</li>
+</ol>
+</li>
+</ol>
+<h3 id="TIME"><a href="#TIME" class="headerlink" title="TIME"></a>TIME</h3><ol>
+<li>基础知识<ol>
+<li>一般用Time6和Time7，不需要配置GPIO口</li>
+<li>80Mhz，分频80，就是1us，16位最多65535，所以一般取8000，就是100us，0.1ms。然后周期选择10000，就变成了1s，一般选1000，变成0.1s；</li>
+<li>注意分频位和周期位，比如分频位取8000，那输入就是输入7999，要减少一位</li>
+</ol>
+</li>
+<li>基础配置<ol>
+<li>把使能打开，把分频和周期配好，一般是分频7999、周期999；需要中断</li>
+</ol>
+</li>
+<li><strong>写代码</strong><ol>
+<li>有点像串口中断接收，需要在初始化区域打开基础定时器的中断。那么如何找到那个函数呢：在.h文件搜索”start“</li>
+<li>回调函数，直接在中断里面的那个函数朔源进去，找到定时器更新回调函数（这个不需要重新打开串口，不像串口接收中断）</li>
+<li>注意要加上定时器型号的判别代码（源码的tim.c有）</li>
+</ol>
+</li>
+</ol>
+<h3 id="捕获PWM值"><a href="#捕获PWM值" class="headerlink" title="捕获PWM值"></a>捕获PWM值</h3><ol>
+<li><p>原理：测量相邻的两个上升沿的间隔获得周期；测量一个上升沿和一个下降沿的间隔获得高电平时间；测量到之后是通过中断获取时间。所以需要开中断，并且如果需要测量占空比的话需要开两个通道</p>
+</li>
+<li><p>在引脚产品手册7.2信号发生器</p>
+<ol>
+<li>PA15选定时2通道1</li>
+<li>PB4选定时3通道1（<strong>注意如果有端口冲突的话就得用别的或者取消掉一个）</strong></li>
+</ol>
+</li>
+<li><p>TIME2基础配置</p>
+<ol>
+<li><p>Reset Mode</p>
+</li>
+<li><p>TL1FP1（如果用的CH2就要用TL2FP2）</p>
+</li>
+<li><p>internet clock</p>
+</li>
+<li><p><strong>input direct mode</strong></p>
+</li>
+<li><p><strong>input indirect mode</strong></p>
+</li>
+<li><p>分频79</p>
+</li>
+<li><p>周期65535</p>
+</li>
+<li><p>自动预装载</p>
+</li>
+<li><p>通道一上升沿</p>
+</li>
+<li><p>通道二下降沿</p>
+</li>
+<li><p>需要中断</p>
+</li>
+<li><p>在GOIO口把用到的GPIO口配成高速模式</p>
+</li>
+</ol>
+</li>
+<li><p>另一个定时器和定时器2一样</p>
+</li>
+<li><p><strong>写代码</strong></p>
+<ol>
+<li>首先开启基本定时器（别初始化了就忘记开启定时器了）<ol>
+<li>​	<strong>HAL_TIM_Base_Start(&amp;htim3);</strong><br>然后开启输入捕获的通道1、通道2<br>函数寻找方法：记住多了个IC<br>HAL_TIM_IC_START_<strong>IT</strong>（用的IT，IT的意思是中断，以中断打开）</li>
+</ol>
+</li>
+<li>然后写回调函数<ol>
+<li>寻找回调函数：从中断函数那里朔源，找到对应中断的事件执行区域</li>
+<li>回调函数的基本结构：首先是判断是否是对应定时器，然后判断是通道一还是通道二<br>写这个结构的时候，记住变量是<strong>TIM3</strong><br>判断通道的时候，把Instance换成channel，判断通道的变量是HAL_TIM_ACTIVE_CHANNEL_2，记住是带active的<br>但是里面的if里面的内容value_T_tim &#x3D;  HAL_TIM_ReadCapturedValue(htim,TIM_CHANNEL_2)+1;,一是直接是htim，二是不带active，三是要+1<ol>
+<li>通道二：HAL_TIM_ACTIVE_CHANNEL_2</li>
+</ol>
+</li>
+<li>通道一：读取捕获数据（+1），计算占空比<ol>
+<li>读取捕获数据函数寻找<br>变量 &#x3D; HAL_TIM_READ（captured）（+1）（<strong>注意别多打了IC</strong>）</li>
+<li>duty &#x3D; <strong>（float）</strong>通道二 &#x2F; 通道一<br><strong>（所有除法都记得要float）</strong></li>
+</ol>
+</li>
+<li>通道二：读取捕获数据<ol>
+<li>读取的数据记得+1</li>
+<li>读取数据函数的输入变量是htim，别加多余的东西</li>
+<li>通道是tim_channel1，不是1</li>
+</ol>
+</li>
+<li>数据转换和显示<ol>
+<li>频率 &#x3D; 1000000 &#x2F; 通道一变量</li>
+<li><strong>占空比 &#x3D; duty * 100</strong></li>
+<li>记住占空比是除法的结果，所以是float</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="PWM输出"><a href="#PWM输出" class="headerlink" title="PWM输出"></a>PWM输出</h3><ol>
+<li><p>原理：设定一个阈值，超过这个值的输出1，低于这个值的输出0，所以并不需要用到中断；两个寄存器，控制发送周期，一个控制阈值</p>
+</li>
+<li><p>PA6选定时器3通道1，PA7选定时器17通道1</p>
+</li>
+<li><p>基础配置</p>
+<ol>
+<li>slave mode（从动模式）关掉<br>interal clock（内部时钟源）<br>通道一选PWM generation CH1<br>不需要中断</li>
+<li>分频79<br>周期999（这个决定了输出的频率，如果固定要求4k的话，那这个值就是1M &#x2F; 4000  - 1&#x3D; 250  -1，记得250-1 &#x3D; 249 ）<br>自动预装载开启（有可能不用）</li>
+<li>clear input Source ： Disable</li>
+<li>通道1设置300（这是占空比，因为分频79，周期999的话，就是1毫秒，就是1000，300&#x2F;1000 &#x3D; 0.3，就是占空比0.3）</li>
+<li>在GOIO口把用到的GPIO口配成高速模式</li>
+</ol>
+</li>
+<li><p><strong>写代码</strong></p>
+<ol>
+<li><p>初始化后，紧接着把对应的通道开启</p>
+<ol>
+<li>函数为：HAL_TIM_<strong>PWM</strong>_START（不用IT，因为没用到中断）</li>
+<li>对比输入捕获，不需要	HAL_TIM_Base_Start(&amp;htim2);</li>
+</ol>
+</li>
+<li><p><strong>TIM17</strong></p>
+<ol>
+<li>16bitvalue：6000（为什么前面的是300）</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="方波输出"><a href="#方波输出" class="headerlink" title="方波输出"></a>方波输出</h3><ol>
+<li><p><strong>mode</strong></p>
+<ol>
+<li>选中interal clock</li>
+<li>channal1：比较输出模式（因为是要输出方波）</li>
+</ol>
+</li>
+<li><p>基础配置</p>
+<ol>
+<li>分频79<br>自动预装载开启</li>
+<li>mode：toggle on match<br>pulse: 100</li>
+<li>开启中断</li>
+</ol>
+</li>
+<li><p><strong>写代码</strong></p>
+<ol>
+<li><p>直接在初始化区域打开中断</p>
+<ol>
+<li>找中断开启函数（一般只用一个通道）<br>HAL_TIN_<strong>OC</strong>_START</li>
+</ol>
+</li>
+<li><p>然后写回调函数</p>
+<ol>
+<li><p>找回调函数：<br>中断函数朔源，找到和OC有关的回调函数</p>
+</li>
+<li><p>写定时器判别和通道判别代码</p>
+</li>
+<li><p>读取数据函数怎么找？不知道，到时候在MX上看看吧。</p>
+</li>
+<li><p>方波检查方法：</p>
+<p>直接把方波输出和PWM捕获连起来</p>
+</li>
+<li><p>方波频率：</p>
+<p>以1M为基础，如果想要5kHz，那么就是1M &#x2F; 5k &#x3D; 200，由于方波是上下翻转的，所以读取数据函数的数据就填100</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="记忆总结"><a href="#记忆总结" class="headerlink" title="记忆总结"></a>记忆总结</h4><ol>
+<li><p><strong>哪些需要中断</strong></p>
+<p>除了PWM输出，别的都要中断</p>
+<p>要把输出的速度全部弄成高速？</p>
+</li>
+</ol>
+<h5 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h5><ol>
+<li>如果用到sprintf，一定要记得数组空间要定义好大小</li>
+<li><img src="D:/typora/软件本体/Typora/resources/截图/image-20240324145013735.png" alt="image-20240324145013735">这种报错全部都是要定义数组并且指定大小</li>
+<li>用到串口，RTC，ADC要配时钟</li>
+<li>如果黑屏了，说明是初始的时候，那个电阻扭太大了</li>
+</ol>
+<h3 id="RTC"><a href="#RTC" class="headerlink" title="RTC"></a>RTC</h3><ol>
+<li>基本配置<ol>
+<li>Mode：开头的两行都要启动</li>
+<li>记得到时钟界面选择最上面的选项，让输出是750</li>
+<li>配成125和6000</li>
+<li>初始日期时间随便</li>
+</ol>
+</li>
+<li>移植<ol>
+<li>别忘记移植时钟</li>
+<li>定义结构体<ol>
+<li>输入RTC_TIM，格式为H_M_S_Time</li>
+<li>输入RTC_DA，格式为Y_M_D_Date</li>
+</ol>
+</li>
+<li>使用的函数<ol>
+<li>HAL_RTC_GETDATE</li>
+<li>HAL_RTC_GETTIME</li>
+<li>这个函数的第三个输入量是RTC_FORMAT_BIN，意思是二进制表示时间（format是格式化的意思）</li>
+</ol>
+</li>
+<li>显示的格式<ol>
+<li>%02d，H_M_S_TIME.hours，</li>
+<li>一定要记得两个读取函数yi’qi</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="PWM输出-1"><a href="#PWM输出-1" class="headerlink" title="PWM输出"></a>PWM输出</h4><ol>
+<li>arr的数值决定频率，ccr数值决定占空比</li>
+<li>如果arr &#x3D; x，那么ccr &#x3D; 0.5*x，占空比就是0.5</li>
+</ol>
+<h1 id="2023年真题"><a href="#2023年真题" class="headerlink" title="2023年真题"></a>2023年真题</h1><ol>
+<li><p>基础配置</p>
+<ol>
+<li><p>MX软件的基本配置</p>
+<ol>
+<li>Project选项卡，选择Base模式、ARM模式,V5版本</li>
+<li>Code Gener’ator选项卡，记得勾选上.c&#x2F;.h那一行</li>
+</ol>
+</li>
+<li><p>keil5的配置</p>
+<ol>
+<li><p>魔法棒<br>output，选择生成hex<br>debug，选择DAP</p>
+<ol>
+<li>进入到debug setting里面，<strong>flash dowmload选项卡把reset and run选上</strong>(不然下载代码之后它不会运行)</li>
+</ol>
+</li>
+<li><p>扳手<br>把自动填充打开</p>
+</li>
+<li><p>C++<br>把include path改成<strong>inc的bsp文件，不然找不到.h</strong></p>
+</li>
+<li><p>缺少启动文件</p>
+<p>缺少的xx.s的启动文件，去官方例程代码里面粘出来就行了</p>
+</li>
+</ol>
+</li>
+<li><p>ADC，配置PB15（R37），记得GPIO口那里开的是ADC2_IN15，然后Analog里面也是配置ADC2，并在里面开启IN15的使能</p>
+<ol>
+<li><strong>注意事项，配置的时候，配成异步二分频，并且要在时钟源里配置到PLLP</strong>；rank通道周期最大</li>
+<li>函数编写，记得是要先start，才能获取数值</li>
+<li>原理是把2的12位（4096）的数电信号转化成3.3V的模拟电信号</li>
+</ol>
+</li>
+<li><p>LCD</p>
+<ol>
+<li>uint16_t是数字型</li>
+<li><strong>要用unsigned char类型变量来装字符串，千万别忘记限定变量的长度为22！！！</strong></li>
+<li><strong>初始化后面记得要接上clear（while）</strong>；不能在初始化函数里面加上clear，要在外面，不然lcd显示屏幕会有残留</li>
+</ol>
+</li>
+<li><p>lEd</p>
+<ol>
+<li>记得配好C口的东西之后，<strong>要用D2口发送set，然后reset关闭，</strong>才能够把PC的信号发出去</li>
+<li>配置的时候，C口默认高电平（这样灯才是暗的），推挽输出；</li>
+<li><strong>别漏了PD2</strong>！！！！！也是输出，默认低电平</li>
+<li>写proc函数的时候，记得要分两段，一段是把灯关掉，然后才能再开一次灯</li>
+<li>要在频率最高的函数里面闪烁</li>
+</ol>
+</li>
+<li><p>键盘</p>
+<ol>
+<li>键盘的key_scan函数，注意value值要赋初值为0</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="2024年模拟题1"><a href="#2024年模拟题1" class="headerlink" title="2024年模拟题1"></a>2024年模拟题1</h1><p>PC4是TX，PC5是RX</p>
+<ol>
+<li>如果生成的源码报错，说明xx.s文件没有加</li>
+</ol>
+<p>串口用不了，日</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
 
@@ -606,20 +2102,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -655,12 +2151,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">25k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">1:32</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>

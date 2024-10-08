@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="比较重要的技巧快捷键 F7，快速编译 取消注释ctr + shit +数字·  调试技巧 如果想要不手动取消断点也能结束仿真，可以把源码路径改浅  c代码基础指针 对于 *p 来说，p是指针， 星号 是取数，&amp;是取地址；就把指针当成是地址就行了，注意数组c【3】，c就是一个指针  指向指针的指针    首先  * ptr_address，的星，表示ptr_address是指针类型 然后，所">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/09/11/32%E7%9A%84hal%E5%BA%93%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="比较重要的技巧快捷键 F7，快速编译 取消注释ctr + shit +数字·  调试技巧 如果想要不手动取消断点也能结束仿真，可以把源码路径改浅  c代码基础指针 对于 *p 来说，p是指针， 星号 是取数，&amp;是取地址；就把指针当成是地址就行了，注意数组c【3】，c就是一个指针  指向指针的指针    首先  * ptr_address，的星，表示ptr_address是指针类型 然后，所">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/picture/image-20240919194832165.png">
+<meta property="og:image" content="http://example.com/picture/image-20240919195307503.png">
+<meta property="og:image" content="http://example.com/picture/image-20240919195637254.png">
+<meta property="og:image" content="http://example.com/picture/image-20240911230242585.png">
+<meta property="og:image" content="http://example.com/picture/image-20240911225710403.png">
+<meta property="og:image" content="http://example.com/picture/image-20240924155917762.png">
+<meta property="og:image" content="http://example.com/picture/image-20240923160515395.png">
+<meta property="og:image" content="http://example.com/picture/image-20240923164227804.png">
+<meta property="og:image" content="http://example.com/picture/image-20240923164240547.png">
+<meta property="og:image" content="http://example.com/picture/image-20240924203046484.png">
+<meta property="og:image" content="http://example.com/picture/image-20240924203810695.png">
+<meta property="og:image" content="http://example.com/picture/image-20240925204108883.png">
+<meta property="og:image" content="http://example.com/picture/image-20240925215836310.png">
+<meta property="og:image" content="http://example.com/picture/image-20240925215803591.png">
+<meta property="article:published_time" content="2024-09-11T14:50:22.052Z">
+<meta property="article:modified_time" content="2024-09-29T03:19:52.971Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/picture/image-20240919194832165.png">
+
+<link rel="canonical" href="http://example.com/2024/09/11/32%E7%9A%84hal%E5%BA%93%E5%AD%A6%E4%B9%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title> | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">5</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">8</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/09/11/32%E7%9A%84hal%E5%BA%93%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-09-11 22:50:22" itemprop="dateCreated datePublished" datetime="2024-09-11T22:50:22+08:00">2024-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-29 11:19:52" itemprop="dateModified" datetime="2024-09-29T11:19:52+08:00">2024-09-29</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.5k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>13 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="比较重要的技巧"><a href="#比较重要的技巧" class="headerlink" title="比较重要的技巧"></a>比较重要的技巧</h3><h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><ol>
+<li>F7，快速编译</li>
+<li>取消注释ctr + shit +数字·</li>
+</ol>
+<h4 id="调试技巧"><a href="#调试技巧" class="headerlink" title="调试技巧"></a>调试技巧</h4><ol>
+<li>如果想要不手动取消断点也能结束仿真，可以把源码路径改浅</li>
+</ol>
+<h3 id="c代码基础"><a href="#c代码基础" class="headerlink" title="c代码基础"></a>c代码基础</h3><h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><ol>
+<li><p>对于 *p 来说，p是指针， 星号 是取数，&amp;是取地址；就把指针当成是地址就行了，注意数组c【3】，c就是一个指针</p>
+</li>
+<li><p>指向指针的指针</p>
+<ul>
+<li><p><img src="/../picture/image-20240919194832165.png" alt="image-20240919194832165"> </p>
+<p>首先  * ptr_address，的星，表示ptr_address是指针类型</p>
+<p>然后，所指向的ptr2，是指针类型，所以前面还要加一个 int *</p>
+<p>如果难以理解，就用上面的例子理解，* ptr2，是定义ptr2是指针类型，前面的int，是因为指向的var是int类型，所以int * * ptr_address的int *，就相当于是int * ptr2的int</p>
+</li>
+</ul>
+</li>
+<li><p>指针的赋值</p>
+<ul>
+<li><p><img src="/../picture/image-20240919195307503.png" alt="image-20240919195307503"></p>
+<p>一般是定义和赋值一起做，算是特定格式了，要记住</p>
+<p>但是也能定义了再赋予地址：<br><img src="/../picture/image-20240919195637254.png" alt="image-20240919195637254"></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="仿真器和调试器"><a href="#仿真器和调试器" class="headerlink" title="仿真器和调试器"></a>仿真器和调试器</h3><ol>
+<li>仿真器和调试器的来源<ul>
+<li>以前做芯片开发的时候，debug的时候，cpu不能单步运行，要么是软件仿真，要么是硬件仿真，模拟cpu，来实现单步运行。但是以前一种芯片只能用特定的那一款仿真器，又贵，换一个芯片就必须同时换一个仿真器。后面就把cpu升级了，让cpu能够单步运行了，是通过JTAG来连接调试器，如果有调试器就可以让cpu进入调试模式，调试模式里面可以单步运行，如果不接调试器就是正常情况下一下子全部运行了，当然这个JTAG的功能不只是单步执行。最关键的是，调试器可以调试不同的cpu，只要接口是符合JTAG就行</li>
+</ul>
+</li>
+<li>常用的调试器接口<ul>
+<li>JTAG（读作 j   tag ），是一个调试接口，几乎所有的cpu都能用JTAG，是一个通用标准，绝大多数人都用这个</li>
+<li>SWD，和JTAG相比，最大的区别其实只是占用的gpio个数，SWD占用的GPIO少一点，而JTAG就比较标准，比较完善</li>
+</ul>
+</li>
+</ol>
+<h3 id="32的三种编程方法"><a href="#32的三种编程方法" class="headerlink" title="32的三种编程方法"></a>32的三种编程方法</h3><ol>
+<li>直接寄存器操作<ul>
+<li>这是最底层的操作方法，但是要对芯片的寄存器非常熟悉，而且非常的麻烦，一旦换一个新芯片，又要重新熟悉寄存器</li>
+</ul>
+</li>
+<li>标准库<ul>
+<li>由于直接操作寄存器太麻烦，官方就直接把常用内部外设的实现函数全部写成了函数收到库里面，然后给到头文件我们，我们要用的时候只需要调用就行了。但是缺点是，只有内部外设相关的函数，如果我们要拓展开去实现更多的功能，像（乱七八糟的高级功能）就用不了标准库了。</li>
+</ul>
+<p>	</p>
+</li>
+<li>HAL库<ul>
+<li>解决了标准库的很大一部分的缺陷，有很多集成的功能函数，有点像一个操作系统了，</li>
+</ul>
+</li>
+</ol>
+<h3 id="ISP"><a href="#ISP" class="headerlink" title="ISP"></a>ISP</h3><ol>
+<li>ISP是什么<ul>
+<li>英文就是（In system programming），就是在系统烧录</li>
+<li>以前的话，是要用专门的烧录器把代码烧录进芯片flash里面，很麻烦。</li>
+<li>所以，不用烧录器就能把代码下载到flash里面的技术就叫做ISP</li>
+<li>现在一般是PC通过串口把hex文件isp到falsh里面，</li>
+<li>isp的过程，是涉及到32的架构原理，首先是从系统存储区启动来把代码烧录进flash，烧录完成之后重启，就是在用户存储区启动了。</li>
+<li>然后呢，系统存储器里面存的是stm32一出厂就被固化了的bootloader程序，boot是启动，loader是装载器，就是启动装载器，如果是boot1、boot0是10的话，就会系统存储器启动，然后就能够通过串口给flash烧录代码，然后重启的话就是在用户存储器启动了</li>
+</ul>
+</li>
+</ol>
+<h3 id="spi"><a href="#spi" class="headerlink" title="spi"></a>spi</h3><ol>
+<li>串行外设接口，spi是一个通讯协议</li>
+</ol>
+<h3 id="RTC，real-time-clock，实时时钟模块"><a href="#RTC，real-time-clock，实时时钟模块" class="headerlink" title="RTC，real time clock，实时时钟模块"></a>RTC，real time clock，实时时钟模块</h3><ul>
+<li><p>是一个独立的定时器，配置之后可以让它精确的每秒触发一次中断，可以修改计数值来改变当前的日期，可以通过计数器的值来算出当前的年月日时分秒。当VDD有效时，VDD供电。断电之后，需要独立电池继续供电，所以断电之后计数器还会继续运作。</p>
+</li>
+<li><p>通过VBAT引脚和 CR1220电池供电</p>
+</li>
+</ul>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><ol>
+<li>定义<ul>
+<li>预处理是编译前的一个步骤</li>
+<li>所有预处理代码都是以 # 开头</li>
+<li>一般就三大常用<ol>
+<li>宏<ul>
+<li>本质是用预处理器进行了一个文本替换工作</li>
+<li>如果要重复用到某个比较简单的逻辑，要么用宏，要么用函数。但是只是处理简单的逻辑的话，用函数比较浪费资源，所以用宏好点。用宏对比手搓的话，最大的好处是，要修改逻辑可以直接替换宏体</li>
+</ul>
+</li>
+<li>#include “ 文件名  ”  或者 #include &lt;文件名&gt; <ul>
+<li>意思是编译之前就用预处理器把这一行代码替换成引用的文件，和当前的代码文件相连接起来</li>
+<li>用 “ ” 的话一般是自己定义的c文件，用&lt;&gt;就一般是系统文件</li>
+</ul>
+</li>
+<li>条件编译，#ifdef  &#x2F;  #ifndef     配合  #endif 使用<ul>
+<li>在预处理阶段加入条件编译的逻辑，可能有某部分在某条件下不用进行预处理。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><ol>
+<li>操作系统是什么<ul>
+<li>有点像公司的管理部门，不去直接实现技术的东西，他的工作是让公司分好层，分好模块，分好部门，能够更有效率的去工作。如果是以前的51板子的话，一共就那么一点点的内存，那么就不需要什么系统，直接上裸机开发，写的每一句代码都是直接去干活的，都是直接能够实现实际功能的。但是32几十K甚至几百M的内存，以及项目变得复杂之后，就不能硬着头皮去裸机开发了，就需要去对内存资源进行管理。就是分层，分模块，按照不同的功能分开<strong>（搞不太懂操作系统，等以后补充吧）</strong></li>
+</ul>
+</li>
+</ol>
+<p>tcpip协议？<br>lwip</p>
+<p>low wait ip</p>
+<p>实现文件系统？移植第三方文件系统？</p>
+<p>gui？</p>
+<p>内存管理方面，和boot</p>
+<h3 id="内存相关"><a href="#内存相关" class="headerlink" title="内存相关"></a>内存相关</h3><h4 id="rom"><a href="#rom" class="headerlink" title="rom"></a>rom</h4><ul>
+<li>只读，断电保存，用来长期保存数据，读写比较慢</li>
+<li>最常用的是eeprom，电可擦，断电保存，</li>
+<li>32都用flash，不用rom</li>
+</ul>
+<h4 id="ram"><a href="#ram" class="headerlink" title="ram"></a>ram</h4><ul>
+<li>断电数据丢失，临时的内存区，读写快</li>
+<li>常用sram，低功耗，静态ram，不用刷新</li>
+<li>比如说，用来存放代码运行过程中，值会改变的变量</li>
+</ul>
+<h4 id="flash"><a href="#flash" class="headerlink" title="flash"></a>flash</h4><ul>
+<li>集合了rom和ram的优点，断电保存，速度快，电可擦</li>
+<li>很多32单片机的内存组成就是flash + sram</li>
+<li>保存代码程序，以及各种初始值，以及常量</li>
+</ul>
+<p>使用过程中，flash可以满，但是ram要预留百分之十的空间</p>
+<h3 id="锁相环（简称PLL）"><a href="#锁相环（简称PLL）" class="headerlink" title="锁相环（简称PLL）"></a>锁相环（简称PLL）</h3><ul>
+<li>作用是，能够把晶振的频率倍频成各种各样的频率，在保证系统只有一个晶振的前提下，满足不同设备的工作频率需求。</li>
+</ul>
+<h4 id="最简单的基本原理和内部组成"><a href="#最简单的基本原理和内部组成" class="headerlink" title="最简单的基本原理和内部组成"></a>最简单的基本原理和内部组成</h4><ol>
+<li><p>最简单的基本原理<img src="/../picture/image-20240911230242585.png" alt="image-20240911230242585">f1一般是晶振电路的输入，f2是输出</p>
+</li>
+<li><p>压控振荡器（VCO）</p>
+<ul>
+<li>功能是根据输入的电压，输出对应的频率，输出的频率可以达非常高的程度</li>
+<li>反馈调节是为了保证输入稳定</li>
+</ul>
+</li>
+<li><p>鉴相器</p>
+<ul>
+<li><p>作用是保证 f1 和 f2 的相位、频率一致，从而使得压控振荡器的输入稳定</p>
+</li>
+<li><p><img src="/../picture/image-20240911225710403.png" alt="image-20240911225710403"></p>
+<p>原理是在f1和f2相位或者频率不同的位置输出，从而使得f2跟随f1</p>
+</li>
+</ul>
+</li>
+<li><p>低通滤波器</p>
+<ul>
+<li>由于鉴相器的输入是矩形波，要用滤波器使其输出变得平滑。</li>
+</ul>
+</li>
+<li><p>分频器</p>
+<ul>
+<li>16倍频，就是输入16个脉冲，它才输出1个脉冲。所以能把1600M变成100M</li>
+</ul>
+</li>
+</ol>
+<h3 id="CH340"><a href="#CH340" class="headerlink" title="CH340"></a>CH340</h3><ul>
+<li>常见型号是CH340c、CH340g</li>
+<li>是USB转TTL（串口）下载模块</li>
+</ul>
+<h3 id="各种公司的关系"><a href="#各种公司的关系" class="headerlink" title="各种公司的关系"></a>各种公司的关系</h3><ul>
+<li>ARM开发CM4、CM3内核和调试系统</li>
+<li>ST公司用这个内核以及调试系统，并且自己加了一大堆外设整出来stm32芯片</li>
+<li>再高一层的公司就用这个芯片去设计各种各样的开发板</li>
+</ul>
+<h3 id="寄存器，存储器的映射"><a href="#寄存器，存储器的映射" class="headerlink" title="寄存器，存储器的映射"></a>寄存器，存储器的映射</h3><ol>
+<li>寄存器的映射<ul>
+<li>寄存器是32单片机内部的特殊内存，可以通过修改这些内存的值来控制单片机的功能。对这部分的内存进行命名的过程就叫做寄存器的映射。</li>
+</ul>
+</li>
+<li>存储器的映射<ul>
+<li>32单片机把系统的所有结构，包括flash、sram、各种外设等等东西全部放在了一个4GB的线性的地址空间里面，这个空间就是存储器。但是存储器是没有地址这种说法的，我们给存储器分配地址的过程就是存储器的映射，比如说分配这一段地址是干什么的，是存储什么信息的，还是说作为一个寄存器地址控制什么功能的，由我们来分配。是在.h文件定义好了的。<ul>
+<li>过程就是先定义外设寄存器的结构体的类型。然后定义外设基地址。然后定义寄存器地址</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="板子分布图"><a href="#板子分布图" class="headerlink" title="板子分布图"></a>板子分布图</h3><p><img src="/../picture/image-20240924155917762.png" alt="image-20240924155917762"></p>
+<h3 id="cubemx"><a href="#cubemx" class="headerlink" title="cubemx"></a>cubemx</h3><h4 id="新建工程"><a href="#新建工程" class="headerlink" title="新建工程"></a>新建工程</h4><p><img src="/../picture/image-20240923160515395.png" alt="image-20240923160515395"></p>
+<h3 id="时钟"><a href="#时钟" class="headerlink" title="时钟"></a>时钟</h3><h4 id="内部时钟源"><a href="#内部时钟源" class="headerlink" title="内部时钟源"></a>内部时钟源</h4><ol>
+<li><p>来源于RC振荡器，R是电阻，C是电容</p>
+</li>
+<li><p><img src="/../picture/image-20240923164227804.png" alt="image-20240923164227804"></p>
+<p><img src="/../picture/image-20240923164240547.png" alt="image-20240923164240547"></p>
+<ol>
+<li>维恩电桥作用<ul>
+<li>经过它的信号不会产生任何的相移</li>
+<li>能够通过调整参数来选择不同频率的信号</li>
+</ul>
+</li>
+<li>电路原理<ul>
+<li>由维恩电桥获取需要的频率信号，然后不断放大直到稳定</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="裸机系统和多任务系统"><a href="#裸机系统和多任务系统" class="headerlink" title="裸机系统和多任务系统"></a>裸机系统和多任务系统</h3><p><img src="/../picture/image-20240924203046484.png" alt="image-20240924203046484"></p>
+<h4 id="裸机系统"><a href="#裸机系统" class="headerlink" title="裸机系统"></a>裸机系统</h4><ul>
+<li>由轮询系统和前后台系统组成</li>
+</ul>
+<h5 id="轮询系统"><a href="#轮询系统" class="headerlink" title="轮询系统"></a>轮询系统</h5><ul>
+<li>就是用一个无限循环按照顺序反复运行代码，对于不需要外部事件响应就能完成的事情，轮询系统完全够用了。但是如果用到了外部事件响应，比如说ABCD四个函数，B是按键检测，刚刚好运行到C的时候，按下了案件，又刚刚好CD运行时间非常长，还没有循环到B，我就松开了案件，这样的话就会丢失事件。</li>
+</ul>
+<h5 id="前后台系统"><a href="#前后台系统" class="headerlink" title="前后台系统"></a>前后台系统</h5><ul>
+<li>就是在轮询系统加了个中断，后台是main函数，前台就是中断。 外部事件的响应在前台完成，如果事件处理比较简单，顺手在前台完成也行，但是事件的处理如果比较复杂的话，前台就给个标志位，然后返回后台，紧急事件的处理还是回到后台来完成。对比与轮询系统的话，就是保证了外部的响应它不会丢失。然后呢中断是有可嵌套性，用好了可以大大提升紧急事件处理的实时性。但是本质上，还是在后台主程序上去执行事件处理，如果功能复杂的话，就要对执行流要规划好，很麻烦。</li>
+</ul>
+<h5 id="多任务系统"><a href="#多任务系统" class="headerlink" title="多任务系统"></a>多任务系统</h5><ul>
+<li>事件响应是在中断完成，事件处理是在任务里面完成，每个任务是独立的，互不影响。什么是任务呢，把主程序分成每一个单独的不影响的小程序来分别独立执行，就是任务。</li>
+<li>然后呢，中断的响应有一个优先级，并且每个任务它也有优先级。一个紧急事件被中断标记之后，如果事件对应的任务的优先级高，那么就可以做到马上响应。而且不用费尽心思去把紧急事件的处理去嵌套到各种地方里面去，也不用对执行流去太过规划。</li>
+</ul>
+<h3 id="链表与节点（对应列表与列表项）"><a href="#链表与节点（对应列表与列表项）" class="headerlink" title="链表与节点（对应列表与列表项）"></a>链表与节点（对应列表与列表项）</h3><p><img src="/../picture/image-20240924203810695.png" alt="image-20240924203810695"></p>
+<p>​		分为单向链表和双向链表，大多数情况下都是用的双向链表</p>
+<p>链表是通过节点把离散的数据链接成一个表，通过对节点的插入和删除操作从而实现</p>
+<p>对数据的存取。而数组是通过开辟一段连续的内存来存储数据，这是数组和链表最大的区</p>
+<p>别。</p>
+<p>。通常的做法是节点里面只包含一个用于指向下一个</p>
+<p>节点的指针。要通过链表存储的数据内嵌一个节点即可，这些要存储的数据通过这个内嵌</p>
+<p>的节点即可挂接到链表中，<img src="/../picture/image-20240925204108883.png" alt="image-20240925204108883"></p>
+<h3 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h3><ul>
+<li>​		多任务系统中，任务按照一定的时序不停的切换来执行，让人看起来像是同时执行多任务一样。</li>
+<li>在裸机系统中，代码就是在main主程序里面顺序执行的无限循环，而多任务的话，是把主程序按照功能不同拆分成不同的任务程序，每个任务相互独立，无限循环，无法返回。</li>
+</ul>
+<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><ul>
+<li><h4 id="栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间"><a href="#栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间" class="headerlink" title="栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间"></a>栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间</h4></li>
+</ul>
+<h1 id="常见bug"><a href="#常见bug" class="headerlink" title="常见bug"></a>常见bug</h1><h3 id="无法下载编译M3内核"><a href="#无法下载编译M3内核" class="headerlink" title="无法下载编译M3内核"></a>无法下载编译M3内核</h3><p><img src="/../picture/image-20240925215836310.png" alt="image-20240925215836310"></p>
+<p><img src="/../picture/image-20240925215803591.png" alt="image-20240925215803591"></p>
+<p>debug里面改一改选项就行</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/09/10/%E5%90%84%E7%A7%8D%E4%B8%9C%E8%A5%BF%E7%9A%84%E5%88%9D%E8%AF%86/" rel="prev" title="">
+      <i class="fa fa-chevron-left"></i> 
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AF%94%E8%BE%83%E9%87%8D%E8%A6%81%E7%9A%84%E6%8A%80%E5%B7%A7"><span class="nav-number">1.</span> <span class="nav-text">比较重要的技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">1.1.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-number">1.2.</span> <span class="nav-text">调试技巧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#c%E4%BB%A3%E7%A0%81%E5%9F%BA%E7%A1%80"><span class="nav-number">2.</span> <span class="nav-text">c代码基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-number">2.1.</span> <span class="nav-text">指针</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BF%E7%9C%9F%E5%99%A8%E5%92%8C%E8%B0%83%E8%AF%95%E5%99%A8"><span class="nav-number">3.</span> <span class="nav-text">仿真器和调试器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#32%E7%9A%84%E4%B8%89%E7%A7%8D%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95"><span class="nav-number">4.</span> <span class="nav-text">32的三种编程方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISP"><span class="nav-number">5.</span> <span class="nav-text">ISP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#spi"><span class="nav-number">6.</span> <span class="nav-text">spi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RTC%EF%BC%8Creal-time-clock%EF%BC%8C%E5%AE%9E%E6%97%B6%E6%97%B6%E9%92%9F%E6%A8%A1%E5%9D%97"><span class="nav-number">7.</span> <span class="nav-text">RTC，real time clock，实时时钟模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">8.</span> <span class="nav-text">预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">9.</span> <span class="nav-text">操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98%E7%9B%B8%E5%85%B3"><span class="nav-number">10.</span> <span class="nav-text">内存相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#rom"><span class="nav-number">10.1.</span> <span class="nav-text">rom</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ram"><span class="nav-number">10.2.</span> <span class="nav-text">ram</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#flash"><span class="nav-number">10.3.</span> <span class="nav-text">flash</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%81%E7%9B%B8%E7%8E%AF%EF%BC%88%E7%AE%80%E7%A7%B0PLL%EF%BC%89"><span class="nav-number">11.</span> <span class="nav-text">锁相环（简称PLL）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86%E5%92%8C%E5%86%85%E9%83%A8%E7%BB%84%E6%88%90"><span class="nav-number">11.1.</span> <span class="nav-text">最简单的基本原理和内部组成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CH340"><span class="nav-number">12.</span> <span class="nav-text">CH340</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%84%E7%A7%8D%E5%85%AC%E5%8F%B8%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">13.</span> <span class="nav-text">各种公司的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%84%E5%AD%98%E5%99%A8%EF%BC%8C%E5%AD%98%E5%82%A8%E5%99%A8%E7%9A%84%E6%98%A0%E5%B0%84"><span class="nav-number">14.</span> <span class="nav-text">寄存器，存储器的映射</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%BF%E5%AD%90%E5%88%86%E5%B8%83%E5%9B%BE"><span class="nav-number">15.</span> <span class="nav-text">板子分布图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cubemx"><span class="nav-number">16.</span> <span class="nav-text">cubemx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA%E5%B7%A5%E7%A8%8B"><span class="nav-number">16.1.</span> <span class="nav-text">新建工程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%B6%E9%92%9F"><span class="nav-number">17.</span> <span class="nav-text">时钟</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%86%85%E9%83%A8%E6%97%B6%E9%92%9F%E6%BA%90"><span class="nav-number">17.1.</span> <span class="nav-text">内部时钟源</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%B8%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%92%8C%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F"><span class="nav-number">18.</span> <span class="nav-text">裸机系统和多任务系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A3%B8%E6%9C%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">18.1.</span> <span class="nav-text">裸机系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BD%AE%E8%AF%A2%E7%B3%BB%E7%BB%9F"><span class="nav-number">18.1.1.</span> <span class="nav-text">轮询系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%89%8D%E5%90%8E%E5%8F%B0%E7%B3%BB%E7%BB%9F"><span class="nav-number">18.1.2.</span> <span class="nav-text">前后台系统</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%9A%E4%BB%BB%E5%8A%A1%E7%B3%BB%E7%BB%9F"><span class="nav-number">18.1.3.</span> <span class="nav-text">多任务系统</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8%E4%B8%8E%E8%8A%82%E7%82%B9%EF%BC%88%E5%AF%B9%E5%BA%94%E5%88%97%E8%A1%A8%E4%B8%8E%E5%88%97%E8%A1%A8%E9%A1%B9%EF%BC%89"><span class="nav-number">19.</span> <span class="nav-text">链表与节点（对应列表与列表项）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1"><span class="nav-number">20.</span> <span class="nav-text">任务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%88"><span class="nav-number">20.1.</span> <span class="nav-text">栈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%88%E6%98%AF%E5%9C%A8RAM%E7%9A%84%E4%B8%80%E6%AE%B5%E8%BF%9E%E7%BB%AD%E7%9A%84%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%EF%BC%8C%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BB%BB%E5%8A%A1%E5%B0%B1%E8%A6%81%E7%94%B3%E8%AF%B7%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BB%BB%E5%8A%A1%E6%A0%88%EF%BC%8C%E4%B8%80%E8%88%AC%E6%98%AF%E9%A2%84%E5%AE%9A%E4%B9%89%E5%A5%BD%E7%9A%84%E5%85%A8%E5%B1%80%E6%95%B0%E7%BB%84%EF%BC%8C%E6%88%96%E8%80%85%E5%8A%A8%E6%80%81%E5%88%86%E9%85%8D%E7%9A%84%E4%B8%80%E6%AE%B5%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4"><span class="nav-number">20.2.</span> <span class="nav-text">栈是在RAM的一段连续的内存空间，有多少个任务就要申请多少个任务栈，一般是预定义好的全局数组，或者动态分配的一段内存空间</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81bug"><span class="nav-number"></span> <span class="nav-text">常见bug</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E7%BC%96%E8%AF%91M3%E5%86%85%E6%A0%B8"><span class="nav-number">1.</span> <span class="nav-text">无法下载编译M3内核</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">25k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:32</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
